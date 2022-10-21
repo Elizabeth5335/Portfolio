@@ -44,7 +44,8 @@ echo '" class="h-100">';
     <!-- Favicons -->
     <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
 
@@ -103,7 +104,6 @@ echo '" class="h-100">';
     <div class="hero-container">
         <h1 id="name" class="mb-0"><?= Yii::t('translations', 'Yelyzaveta') ?></h1>
             <h1 id="surname"><?= Yii::t('translations', 'Lazarieva') ?></h1>
-        <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="fa fa-angle-double-down"></i></a>
     </div>
 </section><!-- End Hero -->
 

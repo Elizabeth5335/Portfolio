@@ -34,24 +34,23 @@ Yii::$app->language=Yii::$app->session->get('language');
             <div class="section-title">
                 <span><?= Yii::t('translations', 'About') ?></span>
                 <h2><?= Yii::t('translations', 'About') ?></h2>
-                <h4>Junior Front-end Developer</h4>
+                <h4 class="text-uppercase">Front-end Developer</h4>
             </div>
 
             <div class="row">
-                <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
-                <div class="col-lg-8 d-flex flex-column align-items-stretch">
-                    <div class="content ps-lg-4 d-flex flex-column justify-content-center">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <ul>
+                <div class="image mb-3 col-md-6 col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+                <div class="col-md-6 col-lg-8 d-flex flex-column align-items-stretch justify-content-center justify-content-lg-start">
+                    <div class="row">
+                        <div class="col-lg-6">
+                                <ul class="customPadding">
                                     <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Name') ?>:</strong> <span><?= Yii::t('translations', 'Yelyzaveta') ?> <?= Yii::t('translations', 'Lazarieva') ?> </span></li>
                                     <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Website') ?>:</strong> <a href="#" ><span>www.example.com</span></a></li>
                                     <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Phone') ?>:</strong> <a href="tel:+380991889215"><span>+380 991 889 215</span></a></li>
                                     <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'City') ?>:</strong> <span><?= Yii::t('translations', 'Kharkiv, Ukraine') ?></span></li>
                                 </ul>
                             </div>
-                            <div class="col-lg-6">
-                                <ul>
+                        <div class="col-lg-6">
+                                <ul class="customPadding">
                                     <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Birthday') ?>:</strong> <span>15.02.2002</span></li>
                                     <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Age') ?>:</strong> <span>20</span></li>
                                     <li><i class="fa fa-chevron-right"></i> <strong>E-mail:</strong> <a href="mailto:lazareva15elizaveta@gmail.com"><span>lazareva15elizaveta@gmail.com</span></a></li>
@@ -59,54 +58,85 @@ Yii::$app->language=Yii::$app->session->get('language');
 
                                 </ul>
                             </div>
-                        </div>
-                    </div><!-- End .content-->
-
-                    <div class="skills-content ps-lg-4">
-                        <div class="progress">
-                            <span class="skill">HTML <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar w-80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">CSS, SASS <i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar w-70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">PHP <i class="val">25%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <span class="skill">JavaScript <i class="val">15%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar w-15" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Bootstrap <i class="val">98%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar w-98" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width: 98%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">Yii2 Framework <i class="val">50%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
                     </div>
 
+                    <div class="">
+                        <h3 class="text-center mb-3"><?= Yii::t('translations', 'My skills') ?></h3>
+                        <div class="row skills text-center">
+                            <div class="col-sm-3 col-4">
+                                <h1> <i class="fab fa-html5"></i></h1>
+                                <h5>HTML</h5>
+                            </div>
+                            <div class="col-sm-3 col-4">
+                                <h1> <i class="fab fa-css3-alt"></i></h1>
+                                <h5>CSS</h5>
+                            </div><div class="col-sm-3 col-4">
+                                <h1><i class="fab fa-sass"></i></h1>
+                                <h5>SASS</h5>
+                            </div>
+                            <div class="col-sm-3 col-4">
+                                <h1><i class="fab fa-php"></i></h1>
+                                <h5>PHP</h5>
+                            </div>
+                            <div class="col-sm-3 col-4">
+                                <h1><i class="fab fa-js"></i></h1>
+                                <h5>JavaScript</h5>
+                            </div>
+                            <div class="col-sm-3 col-4">
+                                <h1><i class="fab fa-bootstrap"></i></h1>
+                                <h5>Bootstrap 5</h5>
+                            </div>
+                            <div class="col-sm-3 col-4">
+                                <div id="yii"></div>
+                                <h5>Yii2 Framework</h5>
+                            </div>
+
+
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
+
+<!--            <div class="skills-content ps-lg-4">-->
+<!--                <div class="progress">-->
+<!--                    <span class="skill"><i class="fab fa-html5"></i>HTML <i class="val">80%</i></span>-->
+<!--                    <div class="progress-bar-wrap">-->
+<!--                        <div class="progress-bar w-80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="progress">-->
+<!--                    <span class="skill"><i class="fab fa-css3-alt"></i>   <i class="fab fa-sass"></i>   CSS, SASS <i class="val">70%</i></span>-->
+<!--                    <div class="progress-bar-wrap">-->
+<!--                        <div class="progress-bar w-70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="progress">-->
+<!--                    <span class="skill"><i class="fab fa-php"></i>  PHP <i class="val">25%</i></span>-->
+<!--                    <div class="progress-bar-wrap">-->
+<!--                        <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="progress">-->
+<!--                    <span class="skill"><i class="fab fa-js"></i>  JavaScript <i class="val">15%</i></span>-->
+<!--                    <div class="progress-bar-wrap">-->
+<!--                        <div class="progress-bar w-15" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="progress">-->
+<!--                    <span class="skill"><i class="fab fa-bootstrap"></i> Bootstrap <i class="val">98%</i></span>-->
+<!--                    <div class="progress-bar-wrap">-->
+<!--                        <div class="progress-bar w-98" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width: 98%;"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="progress">-->
+<!--                    <span class="skill">Yii2 Framework <i class="val">50%</i></span>-->
+<!--                    <div class="progress-bar-wrap">-->
+<!--                        <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
         </div>
     </section><!-- End About Me Section -->
@@ -136,7 +166,7 @@ Yii::$app->language=Yii::$app->session->get('language');
                     </div>
                     <h3 class="resume-title"><?= Yii::t('translations', 'Professional Experience') ?></h3>
                     <div class="resume-item">
-                        <h4>Trainee Front-End Developer</h4>
+                        <h4>Front-End Developer</h4>
                         <h5><?= Yii::t('translations', 'June 2022 - Present') ?></h5>
                         <p><em><?= Yii::t('translations', 'VESCOM, Łódź, Poland') ?></em></p>
                         <p>

@@ -616,8 +616,19 @@ section {
 .about .image {
     background: url("../img/me.jpg") center center no-repeat;
     background-size: cover;
+    max-height: 450px;
+    max-width: fit-content;
+    min-width: 310px;
+    min-height: 400px;
+    margin: 0 auto;
 }
 
+@media screen and (max-width: 768px){
+    .about .image {
+        height: 500px;
+        width: auto;
+    }
+}
 .about .skills-content {
     margin-top: 30px;
 }
@@ -1397,4 +1408,20 @@ section {
 
 #footer .credits {
     font-size: 13px;
+}
+
+#yii{
+    background: url("../img/yiiLogo.png") center center;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+#about h1{
+    color: black;
+    font-size: 3rem;
+}
+
+.skills div{
+    margin: auto;
 }

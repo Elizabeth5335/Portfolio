@@ -18,7 +18,7 @@ return [
     'Age'=>'Вік',
     'Education'=>'Освіта',
     'Birthday'=>'Дата народження',
-    'Skills'=>'Навички',
+    'Skills'=>'Мої навички',
     'Summary'=>'Загальне',
     'Professional Experience'=>'Досвід роботи',
     'Random facts'=>'Рандомні факти',
