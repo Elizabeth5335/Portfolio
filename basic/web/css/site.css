@@ -914,13 +914,16 @@ section {
     color: #66a949;
     border-color: #336f18;
 }
+/*
 
 .portfolio .portfolio-item {
     margin-bottom: 30px;
 }
+*/
 
 .portfolio .portfolio-item .portfolio-img {
     overflow: hidden;
+    max-height: 230px;
 }
 
 .portfolio .portfolio-item .portfolio-img img {
@@ -929,9 +932,14 @@ section {
 
 .portfolio .portfolio-item .portfolio-info {
     opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 15px;
     transition: all ease-in-out 0.3s;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px 15px;
+    width: 100%;
 }
 
 .portfolio .portfolio-item .portfolio-info h4 {
