@@ -876,8 +876,25 @@ section {
 /*--------------------------------------------------------------
 # My Portfolio
 --------------------------------------------------------------*/
+.fa-chevron-right{
+    color: #336f18;
+}
+.carousel-indicators button {
+    height: 10px !important;
+    width: 10px !important;
+    margin: 0 10px !important;
+    border-radius: 100%;
+}
 
+@media screen and (max-width: 767px){
+    .customPadding{
+        padding: 0;
+    }
+}
 
+.carousel-item img{
+    max-height: 350px;
+}
 .portfolio #portfolio-flters li {
     cursor: pointer;
     display: inline-block;

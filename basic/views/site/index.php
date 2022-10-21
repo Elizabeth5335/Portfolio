@@ -124,39 +124,52 @@ Yii::$app->language=Yii::$app->session->get('language');
                 <div class="col-lg-6">
                     <h3 class="resume-title"><?= Yii::t('translations', 'Summary') ?></h3>
                     <div class="resume-item pb-0">
-                        <h4>Alice Barkley</h4>
-                        <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+                        <h4><?= Yii::t('translations', 'Yelyzaveta') ?> <?= Yii::t('translations', 'Lazarieva') ?></h4>
+                        <p><em>Наразі я студентка четвертого курсу. Маю досвід роботи в якості Front-End розробника.</em></p>
                         <p>
                         <ul>
-                            <li>Portland par 127,Orlando, FL</li>
-                            <li>(123) 456-7891</li>
-                            <li>alice.barkley@example.com</li>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Kharkiv, Ukraine') ?></li>
+                            <li><i class="fa fa-chevron-right"></i> <a href="tel:+380991889215">+380 991 889 215</a></li>
+                            <li><i class="fa fa-chevron-right"></i> <a href="mailto:lazareva15elizaveta@gmail.com"><span>lazareva15elizaveta@gmail.com</span></a></li>
+                        </ul>
+                        </p>
+                    </div>
+                    <h3 class="resume-title"><?= Yii::t('translations', 'Professional Experience') ?></h3>
+                    <div class="resume-item">
+                        <h4>Trainee Front-End Developer</h4>
+                        <h5><?= Yii::t('translations', 'June 2022 - Present') ?></h5>
+                        <p><em><?= Yii::t('translations', 'VESCOM, Łódź, Poland') ?></em></p>
+                        <p>
+                        <ul>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Update legacy project to Bootstrap5') ?></li>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Make layouts responsive') ?></li>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Create new webpages using YII2 framework') ?></li>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Work with database (SQL)') ?></li>
                         </ul>
                         </p>
                     </div>
 
-                    <h3 class="resume-title"><?= Yii::t('translations', 'Education') ?></h3>
-                    <div class="resume-item">
-                        <h4>Master of Fine Arts &amp; Graphic Design</h4>
-                        <h5>2015 - 2016</h5>
-                        <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-                        <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <h3 class="resume-title"><?= Yii::t('translations', 'Professional Experience') ?></h3>
+                    <h3 class="resume-title"><?= Yii::t('translations', 'Education') ?></h3>
                     <div class="resume-item">
-                        <h4>Senior graphic design specialist</h4>
-                        <h5>2019 - Present</h5>
-                        <p><em>Experion, New York, NY </em></p>
-                        <p>
+                        <h4><?= Yii::t('translations', 'V.N.Karazin') ?></h4>
+                        <h5>2019 - 2023</h5>
+                        <p><em><?= Yii::t('translations', 'Faculty') ?>, <?= Yii::t('translations', 'Speciality') ?></em></p>
+                    </div>
+                    <div class="resume-item">
+                        <h4><?= Yii::t('translations', 'University of Łódź') ?></h4>
+                        <h5>2022</h5>
+                        <p><em><?= Yii::t('translations', 'Faculty') ?></em></p>
+                        <p><?= Yii::t('translations', 'uni description') ?></p>
                         <ul>
-                            <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                            <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                            <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                            <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                            <li><i class="fa fa-chevron-right"></i> Database Systems</li>
+                            <li><i class="fa fa-chevron-right"></i> Design Interfaces</li>
+                            <li><i class="fa fa-chevron-right"></i> Programming and Data Structures</li>
+                            <li><i class="fa fa-chevron-right"></i> Software Engineering</li>
+                            <li><i class="fa fa-chevron-right"></i> Architecture of Computer Systems</li>
+                            <li><i class="fa fa-chevron-right"></i> Computer Networks</li>
                         </ul>
-                        </p>
                     </div>
                 </div>
             </div>
@@ -173,18 +186,66 @@ Yii::$app->language=Yii::$app->session->get('language');
                 <h2><?= Yii::t('translations', 'Random facts') ?></h2>
             </div>
 
+
             <div class="row">
                 <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
-                <div class="row">
-                    <div class="col-6">
-                        <img src="/img/plants1.jpg" alt="plants" style="max-width: 80%;">
+                <div class="row m-0">
+                    <div class="col-xs-12 col-md-6 mb-4">
+
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="img/plants1.jpg" class="d-block w-100" alt="plants">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/guitar.jpg" class="d-block w-100" alt="guitar">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/languages.jpg" class="d-block w-100" alt="languages">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/tea.jpg" class="d-block w-100" alt="tea">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/cat.jpg" class="d-block w-100" alt="cat">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/winner.jpg" class="d-block w-100" alt="competition">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/soup.jpg" class="d-block w-100" alt="soup">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+
+                        </div>
+
                     </div>
-                    <div class="col-6">
-                        <ul>
-                            <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Birthday') ?>:</strong> <span>15.02.2002</span></li>
-                            <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Age') ?>:</strong> <span>30</span></li>
-                            <li><i class="fa fa-chevron-right"></i> <strong>E-mail:</strong> <span>mymail@gmail.com</span></li>
-                            <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Education') ?>:</strong> <span><?= Yii::t('translations', 'Karazin') ?></span></li>
+                    <div class="col-xs-12 col-md-6">
+                        <ul class="mx-auto customPadding">
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I am addicted to plants') ?></li>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I play guitar and piano') ?></li>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I started to learn 7 languages, but speak 4.5') ?></li>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I drink a looooot of tea') ?></li>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I dream of having a cat') ?></li>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'In 2021 I won an award from \'She is Science\' for the best essay about female scientist') ?></li>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I enjoy cooking, especially soups') ?></li>
 
                         </ul>
                     </div>

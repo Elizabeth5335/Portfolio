@@ -24,7 +24,10 @@ return [
     'Professional Experience'=>'Professional Experience',
     'Random facts'=>'Random facts',
     'Karazin'=>'V.N.Karazin Kharkiv National University',
-    'Language'=>'Choose language'
+    'Language'=>'Choose language',
+    'Faculty'=>'Faculty of Computer Science',
+    'Speciality'=>'Speciality: Cyber-security',
+    'uni description'=>'I studied at the University of Łódź as a mobility student for one semester. Taken courses:',
 
 
 

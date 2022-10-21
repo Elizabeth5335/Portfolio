@@ -24,8 +24,23 @@ return [
     'Random facts'=>'Рандомні факти',
     'Karazin'=>'ХНУ ім. В.Н.Каразіна',
     'Language'=>'Оберіть мову',
-    'Home'=>'На головну'
-
-
-
+    'Home'=>'На головну',
+    'June 2022 - Present'=>'Червень 2022 - Теперішній час',
+    'VESCOM, Łódź, Poland'=>'VESCOM, Лодзь,Польща',
+    'Work with database (SQL)'=>'Робота з базами даних (SQL)',
+    'Create new webpages using YII2 framework'=>'Створення нових сторінок за допомогою фреймворка YII2',
+    'Make layouts responsive'=>'Створення адаптивних макетів',
+    'Update legacy project to Bootstrap5'=>'Оновлення існуючого проєкту до Bootstrap 5',
+    'V.N.Karazin'=>'Харківський національний університет ім. В.Н.Каразіна',
+    'Faculty'=>'Факультет комп\'ютерних наук' ,
+    'Speciality'=>'спеціальність: Кібербезпека',
+    'University of Łódź'=>'Лодзінський університет, Польща',
+    'uni description'=>'Я навчалася в Лодзінському університеті за обміном протягом одного семестру. Вивчала наступні курси:',
+    'I am addicted to plants'=>'Я обожнюю кімнатні рослини',
+    'I play guitar and piano'=>'Я граю на гітарі та піаніно',
+    'I started to learn 7 languages, but speak 4.5'=>'Я починала вчити 7 мов, проте говорю на 4,5',
+    'I drink a looooot of tea'=>'Я п\'ю багаааато чаю',
+    'I dream of having a cat'=>'Мрію завести кота',
+    'In 2021 I won an award from \'She is Science\' for the best essay about female scientist'=>'У 2021 році я перемогла у конкурсі есеїв від "Наука - це вона"',
+    'I enjoy cooking, especially soups'=>'Я люблю готувати, особливо супи'
 ];
