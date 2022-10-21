@@ -111,21 +111,27 @@ echo '" class="h-100">';
 
 <!-- ======= Footer ======= -->
 <footer id="footer">
-    <div class="container">
-        <h3><?= Yii::t('translations', 'Yelyzaveta') ?> <?= Yii::t('translations', 'Lazarieva') ?></h3>
-        <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-        <div class="social-links">
-            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <div class="container col-12">
+        <div class="left">
+            Copyright &copy; 2022 <span>Yelyzaveta Lazarieva</span>. All Rights Reserved
         </div>
-        <div class="copyright">
-            &copy; Copyright <strong><span>Laura</span></strong>. All Rights Reserved
-        </div>
+        <nav id="nav" class="">
+            <ul>
+                <li><a class="nav-link" href="/"><?= Yii::t('translations', 'Home') ?></a></li>
+                <li><a class="nav-link scrollto" href="#about"><?= Yii::t('translations', 'About') ?></a></li>
+                <li><a class="nav-link scrollto" href="#resume"><?= Yii::t('translations', 'Resume') ?></a></li>
+                <li><a class="nav-link scrollto " href="#portfolio"><?= Yii::t('translations', 'Portfolio') ?></a></li>
+                <li><a class="nav-link scrollto" href="#contact"><?= Yii::t('translations', 'Contact') ?></a></li>
+            </ul>
+            <i class="fa fa-bars mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+    <div class="gradient-white">
+        <a href="#" class="top back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
     </div>
 </footer><!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <script>
     document.getElementById("en").addEventListener("click", en);

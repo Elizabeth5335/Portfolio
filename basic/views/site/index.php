@@ -30,7 +30,6 @@ Yii::$app->language=Yii::$app->session->get('language');
     <!-- ======= About Me Section ======= -->
     <section id="about" class="about">
         <div class="container">
-
             <div class="section-title">
                 <span><?= Yii::t('translations', 'About') ?></span>
                 <h2><?= Yii::t('translations', 'About') ?></h2>
@@ -55,7 +54,6 @@ Yii::$app->language=Yii::$app->session->get('language');
                                     <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Age') ?>:</strong> <span>20</span></li>
                                     <li><i class="fa fa-chevron-right"></i> <strong>E-mail:</strong> <a href="mailto:lazareva15elizaveta@gmail.com"><span>lazareva15elizaveta@gmail.com</span></a></li>
                                     <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Education') ?>:</strong> <span><?= Yii::t('translations', 'Karazin') ?></span></li>
-
                                 </ul>
                             </div>
                     </div>
@@ -75,6 +73,10 @@ Yii::$app->language=Yii::$app->session->get('language');
                                 <h5>SASS</h5>
                             </div>
                             <div class="col-sm-3 col-4">
+                                <h1><i class="fab fa-bootstrap"></i></h1>
+                                <h5>Bootstrap 5</h5>
+                            </div>
+                            <div class="col-sm-3 col-4">
                                 <h1><i class="fab fa-php"></i></h1>
                                 <h5>PHP</h5>
                             </div>
@@ -83,15 +85,13 @@ Yii::$app->language=Yii::$app->session->get('language');
                                 <h5>JavaScript</h5>
                             </div>
                             <div class="col-sm-3 col-4">
-                                <h1><i class="fab fa-bootstrap"></i></h1>
-                                <h5>Bootstrap 5</h5>
+                                <div class="mb-3" id="yii"></div>
+                                <h5>Yii2</h5>
                             </div>
                             <div class="col-sm-3 col-4">
-                                <div id="yii"></div>
-                                <h5>Yii2 Framework</h5>
+                                <h1><i class="fas fa-database"></i></h1>
+                                <h5>MySQL</h5>
                             </div>
-
-
                         </div>
 
                     </div>
@@ -144,7 +144,6 @@ Yii::$app->language=Yii::$app->session->get('language');
     <!-- ======= My Resume Section ======= -->
     <section id="resume" class="resume">
         <div class="container">
-
             <div class="section-title">
                 <span><?= Yii::t('translations', 'My resume') ?></span>
                 <h2><?= Yii::t('translations', 'My resume') ?></h2>
@@ -207,10 +206,9 @@ Yii::$app->language=Yii::$app->session->get('language');
         </div>
     </section><!-- End My Resume Section -->
 
-    <!-- ======= About Me Section ======= -->
+    <!-- ======= Facts Section ======= -->
     <section id="facts" class="facts">
         <div class="container">
-
             <div class="section-title">
                 <span><?= Yii::t('translations', 'Random facts') ?></span>
                 <h2><?= Yii::t('translations', 'Random facts') ?></h2>
@@ -499,27 +497,27 @@ Yii::$app->language=Yii::$app->session->get('language');
                     <div class="row">
                         <div class="col-md-12">
                             <div class="info-box">
-                                <i class="fa fa-share-alt"></i>
-                                <h3>Social Profiles</h3>
+                                <i class="fas fa-share-alt"></i>
+                                <h3><?= Yii::t('translations', 'Social Profiles') ?></h3>
                                 <div class="social-links">
-                                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                                    <a href="https://www.facebook.com/profile.php?id=100046831201474" class="facebook"><i class="fab fa-facebook"></i></a>
+                                    <a href="https://instagram.com/eli_che_va?igshid=YmMyMTA2M2Y=" class="instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/yelyzaveta-lazarieva-876047235" class="linkedin"><i class="fab fa-linkedin"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="info-box mt-4">
-                                <i class="fa fa-envelope"></i>
-                                <h3>Email Me</h3>
-                                <p>contact@example.com</p>
+                                <i class="fas fa-envelope"></i>
+                                <h3>E-mail</h3>
+                                <p><a href="mailto:lazareva15elizaveta@gmail.com">lazareva15elizaveta@gmail.com</a> </p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="info-box mt-4">
-                                <i class="fa fa-phone"></i>
-                                <h3>Call Me</h3>
-                                <p>+380991889215</p>
+                                <i class="fas fa-phone-alt"></i>
+                                <h3><?= Yii::t('translations', 'Phone') ?></h3>
+                                <p><a href="+380991889215">+380 991 889 215</a></p>
                             </div>
                         </div>
                     </div>
