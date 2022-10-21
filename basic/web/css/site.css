@@ -1,12 +1,3 @@
-
-
-/**
-* Template Name: Laura - v4.9.1
-* Template URL: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -21,7 +12,7 @@ a {
 }
 
 a:hover {
-    color: #ffc85a;
+    color: #66a949;
     text-decoration: none;
 }
 
@@ -625,7 +616,6 @@ section {
 .about .image {
     background: url("../img/me.jpg") center center no-repeat;
     background-size: cover;
-    min-height: 500px;
 }
 
 .about .skills-content {
@@ -886,10 +876,7 @@ section {
 /*--------------------------------------------------------------
 # My Portfolio
 --------------------------------------------------------------*/
-.portfolio #portfolio-flters {
-    list-style: none;
-    margin-bottom: 20px;
-}
+
 
 .portfolio #portfolio-flters li {
     cursor: pointer;
@@ -907,7 +894,7 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-    color: #f3a200;
+    color: #66a949;
     border-color: #336f18;
 }
 
@@ -925,11 +912,6 @@ section {
 
 .portfolio .portfolio-item .portfolio-info {
     opacity: 0;
-    position: absolute;
-    left: 15px;
-    bottom: 0;
-    z-index: 3;
-    right: 15px;
     transition: all ease-in-out 0.3s;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px 15px;
@@ -961,7 +943,7 @@ section {
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
 .portfolio .portfolio-item .portfolio-info .details-link:hover {
-    color: #ffc041;
+    color: #66a949;
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {
@@ -1130,7 +1112,7 @@ section {
 }
 
 .pricing .btn-buy:hover {
-    background: #ffc85a;
+    background: #66a949;
 }
 
 .pricing .featured h3 {
@@ -1292,7 +1274,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-    background: #ffc85a;
+    background: #66a949;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1379,7 +1361,7 @@ section {
 }
 
 #footer .social-links a:hover {
-    background: #f3a200;
+    background: #66a949;
     color: #fff;
     text-decoration: none;
 }

@@ -126,4 +126,9 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
+    public function actionBudmaterialy()
+    {
+        return $this->render('budmaterialy');
+    }
+
 }

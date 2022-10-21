@@ -23,7 +23,8 @@ return [
     'Professional Experience'=>'Досвід роботи',
     'Random facts'=>'Рандомні факти',
     'Karazin'=>'ХНУ ім. В.Н.Каразіна',
-    'Language'=>'Оберіть мову'
+    'Language'=>'Оберіть мову',
+    'Home'=>'На головну'
 
 
 

@@ -55,14 +55,23 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+  //                  'pattern' => 'budmaterialy',
+                    //'route' => 'ua/site/budmaterialy',
+                    'budmaterialy'=>'site/budmaterialy',
+                    /*
+                    'ua/budmaterialy'=>'ua/site/budmaterialy',
+                    'en/budmaterialy'=>'en/site/budmaterialy',
+                    '/ua/budmaterialy'=>'ua/site/budmaterialy',
+                    '/en/budmaterialy'=>'budmaterialy',
+                    '/ua/site/index'=>'/site/index',
+                    '/en/site/index'=>'/site/index',*/
             ],
         ],
-        */
     ],
     'params' => $params,
 ];
