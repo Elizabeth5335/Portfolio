@@ -20,11 +20,10 @@ use yii\helpers\Url;
 
 <?php
 
-//$exp = explode('/',$_SERVER['REQUEST_URI']);
-//$language = $exp[1]; // first element before / (slash)
+$exp = explode('/',$_SERVER['REQUEST_URI']);
+$language = $exp[1]; // first element before / (slash)
 Yii::$app->language=Yii::$app->session->get('language');
-//Yii::$app->session->set('language',$language);
-
+Yii::$app->session->set('language',$language);
 ?>
 <main id="main">
     <!-- ======= About Me Section ======= -->

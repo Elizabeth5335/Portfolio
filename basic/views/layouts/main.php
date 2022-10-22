@@ -29,10 +29,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => '@w
 
 <!DOCTYPE html>
 <?php
-/*
+
 $exp = explode('/',$_SERVER['REQUEST_URI']);
-$language = $exp[1]; // first element before / (slash)*/
-Yii::$app->language=Yii::$app->session->get('language');
+$language = $exp[1];
+Yii::$app->language=$language;
 echo '<html lang="';
 echo Yii::$app->language;
 echo '" class="h-100">';
@@ -83,15 +83,15 @@ echo '" class="h-100">';
 <header id="header" class="fixed-top d-flex justify-content-end align-items-end header-transparent pe-4">
     <nav id="navbar" class="navbar">
         <ul>
-            <li><a class="nav-link" href="/"><?= Yii::t('translations', 'Home') ?></a></li>
+            <li><a class="nav-link" href="<?php echo Yii::$app->language;?>"><?= Yii::t('translations', 'Home') ?></a></li>
             <li><a class="nav-link scrollto" href="#about"><?= Yii::t('translations', 'About') ?></a></li>
             <li><a class="nav-link scrollto" href="#resume"><?= Yii::t('translations', 'Resume') ?></a></li>
             <li><a class="nav-link scrollto " href="#portfolio"><?= Yii::t('translations', 'Portfolio') ?></a></li>
             <li><a class="nav-link scrollto" href="#contact"><?= Yii::t('translations', 'Contact') ?></a></li>
             <li class="dropdown"><a href="#"><span><?= Yii::t('translations', 'Language') ?></span> <i class="fa fa-chevron-down"></i></a>
                 <ul>
-                    <li><a href="" id="en" >en</a></li>
-                    <li><a href="" id="ua" >ua</a></li>
+                    <li><a href="en">en</a></li>
+                    <li><a href="ua">ua</a></li>
                 </ul>
             </li>
         </ul>
@@ -127,25 +127,21 @@ echo '" class="h-100">';
         </nav><!-- .navbar -->
 
     </div>
-    <div class="gradient-white">
+    <div class="arrow">
         <a href="#" class="top back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
     </div>
 </footer><!-- End Footer -->
 
-
-<script>
-    document.getElementById("en").addEventListener("click", en);
-    function en() {
-        <?php Yii::$app->session->set('language', 'en')?>
-    }
-    document.getElementById("ua").addEventListener("click", ua);
-    function ua() {
-        <?php Yii::$app->session->set('language', 'ua')?>
-    }
-</script>
 <?php $this->endBody() ?>
 </body>
 
 </html>
 <?php $this->endPage() ?>
 
+<!--Links in footer
+    Portfolio
+    Favicon
+    Dark theme
+    Languages
+    contact form
+-->
