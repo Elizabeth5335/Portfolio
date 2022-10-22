@@ -44,4 +44,5 @@ return [
     'In 2021 I won an award from \'She is Science\' for the best essay about female scientist'=>'У 2021 році я перемогла у конкурсі есеїв від "Наука - це вона"',
     'I enjoy cooking, especially soups'=>'Я люблю готувати, особливо супи',
     'Social Profiles'=>'Соціальні мережі',
+    'My skills'=>'Навички',
 ];

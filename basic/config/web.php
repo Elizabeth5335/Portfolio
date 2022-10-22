@@ -4,7 +4,7 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
-    'language'=>'en',
+    'sourceLanguage'=>'en',
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -18,7 +18,7 @@ $config = [
                 'translations' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     //'basePath' => '@app/messages',
-                    //'sourceLanguage' => 'en',
+                    //'sourceLanguage' => 'ua',
                     'fileMap' => [
                         'translations' => 'translations.php',
                     ],
@@ -57,22 +57,19 @@ $config = [
         'db' => $db,
 
         'urlManager' => [
+
+            'class' => 'app\components\CUrlManager',
+
             'enablePrettyUrl' => true,
+
             'showScriptName' => false,
+
             'rules' => [
-  //                  'pattern' => 'budmaterialy',
-                    //'route' => 'ua/site/budmaterialy',
-                    'budmaterialy'=>'site/budmaterialy',
-                    /*
-                    'ua/budmaterialy'=>'ua/site/budmaterialy',
-                    'en/budmaterialy'=>'en/site/budmaterialy',
-                    '/ua/budmaterialy'=>'ua/site/budmaterialy',
-                    '/en/budmaterialy'=>'budmaterialy',
-                    '/ua/site/index'=>'/site/index',
-                    '/en/site/index'=>'/site/index',*/
+                '<language:\w+>/'=>'site/index',
+                '<language:\w+>/budmaterialy'=>'site/budmaterialy',
             ],
-        ],
     ],
+        ],
     'params' => $params,
 ];
 

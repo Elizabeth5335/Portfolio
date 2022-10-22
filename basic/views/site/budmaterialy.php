@@ -6,8 +6,10 @@ $this->title = 'My Portfoliooooooo';
 ?>
 <?php
 
-Yii::$app->language=Yii::$app->session->get('language');
-
+$exp = explode('/',$_SERVER['REQUEST_URI']);
+$language = $exp[1]; // first element before / (slash)
+Yii::$app->language=$language;
+Yii::$app->session->set('language',$language);
 ?>
 
 <main id="main">
@@ -19,7 +21,7 @@ Yii::$app->language=Yii::$app->session->get('language');
             <div class="row">
 
                 <div class="col-lg-8">
-                    <h2 class="portfolio-title">This is an example of portfolio detail</h2>
+                    <h2 class="portfolio-title">This is an example of portfolio detail <?= Yii::t('translations', 'Language') ?></h2>
 
                     <div class="portfolio-details-slider swiper">
                         <div class="swiper-wrapper align-items-center">

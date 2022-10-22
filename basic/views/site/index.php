@@ -22,7 +22,7 @@ use yii\helpers\Url;
 
 $exp = explode('/',$_SERVER['REQUEST_URI']);
 $language = $exp[1]; // first element before / (slash)
-Yii::$app->language=Yii::$app->session->get('language');
+Yii::$app->language=$language;
 Yii::$app->session->set('language',$language);
 ?>
 <main id="main">
