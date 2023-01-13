@@ -52,7 +52,7 @@ Yii::$app->session->set('language',$language);
                                     <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Birthday') ?>:</strong> <span>15.02.2002</span></li>
                                     <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Age') ?>:</strong> <span>20</span></li>
                                     <li><i class="fa fa-chevron-right"></i> <strong>E-mail:</strong> <a href="mailto:lazareva15elizaveta@gmail.com"><span>lazareva15elizaveta@gmail.com</span></a></li>
-                                    <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Education') ?>:</strong> <span><?= Yii::t('translations', 'Karazin') ?></span></li>
+                                    <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Education') ?>:</strong> <span><?= Yii::t('translations', 'V.N.Karazin Kharkiv National University') ?></span></li>
                                 </ul>
                             </div>
                     </div>
@@ -181,15 +181,15 @@ Yii::$app->session->set('language',$language);
                 <div class="col-lg-6">
                     <h3 class="resume-title"><?= Yii::t('translations', 'Education') ?></h3>
                     <div class="resume-item">
-                        <h4><?= Yii::t('translations', 'V.N.Karazin') ?></h4>
+                        <h4><?= Yii::t('translations', 'V.N.Karazin Kharkiv National University') ?></h4>
                         <h5>2019 - 2023</h5>
-                        <p><em><?= Yii::t('translations', 'Faculty') ?>, <?= Yii::t('translations', 'Speciality') ?></em></p>
+                        <p><em><?= Yii::t('translations', 'Faculty of Computer Science') ?>, <?= Yii::t('translations', 'Speciality: Cyber-security') ?></em></p>
                     </div>
                     <div class="resume-item">
                         <h4><?= Yii::t('translations', 'University of Łódź') ?></h4>
                         <h5>2022</h5>
-                        <p><em><?= Yii::t('translations', 'Faculty') ?></em></p>
-                        <p><?= Yii::t('translations', 'uni description') ?></p>
+                        <p><em><?= Yii::t('translations', 'Faculty of Computer Science') ?></em></p>
+                        <p><?= Yii::t('translations', 'I studied at the University of Łódź as a mobility student for one semester. Taken courses:') ?></p>
                         <ul>
                             <li><i class="fa fa-chevron-right"></i> Database Systems</li>
                             <li><i class="fa fa-chevron-right"></i> Design Interfaces</li>
@@ -294,7 +294,7 @@ Yii::$app->session->set('language',$language);
             <div class="row portfolio-container">
 
                 <div class="col-lg-4 col-md-6 portfolio-item">
-                    <ul class="box-container">
+                    <ul class="box-container m-auto p-3">
                         <li class="box">
                             <div class="portfolio-img">
                                 <a href="/img/portfolio/portfolio-1.jpg" class="glightbox2" data-glightbox="title: My Title; description: .custom-desc1; descPosition: left;">
@@ -321,148 +321,69 @@ Yii::$app->session->set('language',$language);
                                 </div>
                             </div>
                             <div class="portfolio-info">
-                                <h4>Web 2</h4>
-                                <p>App</p>
+                                <h4>Current portfolio</h4>
+                                <p>Web page made with Yii2</p>
                             </div>
                         </li>
                     </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-6 portfolio-item">
-                    <ul class="box-container">
+                    <ul class="box-container m-auto p-3">
                         <li class="box">
                             <div class="portfolio-img">
-                                <a href="/img/portfolio/portfolio-2.jpg" class="glightbox2" data-glightbox="title: My Title; description: .custom-desc1; descPosition: left;">
+                                <a href="/img/portfolio/portfolio-2.jpg" class="glightbox2" data-glightbox="title: First portfolio; description: .custom-desc2; descPosition: left;">
                                     <img src="/img/portfolio/portfolio-2.jpg" alt="image" />
                                 </a>
-                                <div class="glightbox-desc custom-desc1">
+                                <div class="glightbox-desc custom-desc2">
                                     <p>
-                                        You can set the position of the description in different ways for example
-                                        <strong style="text-decoration: underline">top, bottom, left or right</strong>
+                                        <a href="https://elizabeth5335.github.io/Resume/" target="_blank" style="text-decoration: underline; font-weight: bold">First Resume </a>
+                                        was a kind of test project to show my bootstrap 5 skills.
                                     </p>
                                     <p>
-                                        <a href="budmaterialy" target="_blank" style="text-decoration: underline; font-weight: bold">Example Google link</a>
-                                        ipsum vehicula eros ultrices lacinia Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Duis quis ipsum vehicula eros ultrices lacinia.
-                                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                        It is a one-page website with adaptive layout. It was written using HTML (bootstrap 5), CSS and some JavaScript for animations.
                                     </p>
                                     <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla inceptos, dui per tempor taciti aliquet consequat sodales, curae tristique gravida auctor interdum malesuada sagittis.
-                                        Felis pretium eros ligula natoque ad ante rutrum himenaeos, adipiscing urna mauris porta quam efficitur odio, sagittis morbi tellus nisi molestie mus faucibus.
+                                        The aim of this project was to show my ability to work with bootstrap 5: create responsive tables, long descriptions, images and so on.
                                     </p>
                                     <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla inceptos, dui per tempor taciti aliquet consequat sodales, curae tristique gravida auctor interdum malesuada sagittis.
-                                        Felis pretium eros ligula natoque ad ante rutrum himenaeos, adipiscing urna mauris porta quam efficitur odio, sagittis morbi tellus nisi molestie mus faucibus.
+                                        It was hosted on GitHub Pages.
+                                        <a href="https://github.com/Elizabeth5335/Resume" target="_blank" style="text-decoration: underline; font-weight: bold"><br>Link to Repo</a>
                                     </p>
                                 </div>
                             </div>
                             <div class="portfolio-info">
-                                <h4>Web 2</h4>
-                                <p>App</p>
+                                <h4>First Resume</h4>
+                                <p>Made with bootstrap 5</p>
                             </div>
                         </li>
                     </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-6 portfolio-item">
-                    <ul class="box-container">
+                    <ul class="box-container m-auto p-3">
                         <li class="box">
                             <div class="portfolio-img">
-                                <a href="/img/portfolio/portfolio-3.jpg" class="glightbox2" data-glightbox="title: My Title; description: .custom-desc1; descPosition: left;">
+                                <a href="/img/portfolio/portfolio-3.jpg" class="glightbox2" data-glightbox="title: Building materials; description: .custom-desc3; descPosition: left;">
                                     <img src="/img/portfolio/portfolio-3.jpg" alt="image" />
                                 </a>
-                                <div class="glightbox-desc custom-desc1">
+                                <div class="glightbox-desc custom-desc3">
                                     <p>
-                                        You can set the position of the description in different ways for example
-                                        <strong style="text-decoration: underline">top, bottom, left or right</strong>
+                                        <a href="https://elizabeth5335.github.io/Budmaterialy/" target="_blank" style="text-decoration: underline; font-weight: bold">Building materials </a>
+                                        was my first attempt to create a web page.
                                     </p>
                                     <p>
-                                        <a href="budmaterialy" target="_blank" style="text-decoration: underline; font-weight: bold">Example Google link</a>
-                                        ipsum vehicula eros ultrices lacinia Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Duis quis ipsum vehicula eros ultrices lacinia.
-                                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                                        It is a one-page website with adaptive layout. It was written without any frameworks - using bare HTML and CSS. Some JavaScript fragments were used to create responsive navigation and a "scroll to top" button.
                                     </p>
                                     <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla inceptos, dui per tempor taciti aliquet consequat sodales, curae tristique gravida auctor interdum malesuada sagittis.
-                                        Felis pretium eros ligula natoque ad ante rutrum himenaeos, adipiscing urna mauris porta quam efficitur odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla inceptos, dui per tempor taciti aliquet consequat sodales, curae tristique gravida auctor interdum malesuada sagittis.
-                                        Felis pretium eros ligula natoque ad ante rutrum himenaeos, adipiscing urna mauris porta quam efficitur odio, sagittis morbi tellus nisi molestie mus faucibus.
+                                        It was hosted on GitHub Pages.
+                                        <a href="https://github.com/Elizabeth5335/Budmaterialy" target="_blank" style="text-decoration: underline; font-weight: bold"><br>Link to Repo</a>
                                     </p>
                                 </div>
                             </div>
                             <div class="portfolio-info">
-                                <h4>Web 2</h4>
-                                <p>App</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item">
-                    <ul class="box-container">
-                        <li class="box">
-                            <div class="portfolio-img">
-                                <a href="/img/portfolio/portfolio-4.jpg" class="glightbox2" data-glightbox="title: My Title; description: .custom-desc1; descPosition: left;">
-                                    <img src="/img/portfolio/portfolio-4.jpg" alt="image" />
-                                </a>
-                                <div class="glightbox-desc custom-desc1">
-                                    <p>
-                                        You can set the position of the description in different ways for example
-                                        <strong style="text-decoration: underline">top, bottom, left or right</strong>
-                                    </p>
-                                    <p>
-                                        <a href="budmaterialy" target="_blank" style="text-decoration: underline; font-weight: bold">Example Google link</a>
-                                        ipsum vehicula eros ultrices lacinia Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Duis quis ipsum vehicula eros ultrices lacinia.
-                                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                                    </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla inceptos, dui per tempor taciti aliquet consequat sodales, curae tristique gravida auctor interdum malesuada sagittis.
-                                        Felis pretium eros ligula natoque ad ante rutrum himenaeos, adipiscing urna mauris porta quam efficitur odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla inceptos, dui per tempor taciti aliquet consequat sodales, curae tristique gravida auctor interdum malesuada sagittis.
-                                        Felis pretium eros ligula natoque ad ante rutrum himenaeos, adipiscing urna mauris porta quam efficitur odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4>Web 2</h4>
-                                <p>App</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item">
-                    <ul class="box-container">
-                        <li class="box">
-                            <div class="portfolio-img">
-                                <a href="/img/portfolio/portfolio-5.jpg" class="glightbox2" data-glightbox="title: My Title; description: .custom-desc1; descPosition: left;">
-                                    <img src="/img/portfolio/portfolio-5.jpg" alt="image" />
-                                </a>
-                                <div class="glightbox-desc custom-desc1">
-                                    <p>
-                                        You can set the position of the description in different ways for example
-                                        <strong style="text-decoration: underline">top, bottom, left or right</strong>
-                                    </p>
-                                    <p>
-                                        <a href="budmaterialy" target="_blank" style="text-decoration: underline; font-weight: bold">Example Google link</a>
-                                        ipsum vehicula eros ultrices lacinia Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Duis quis ipsum vehicula eros ultrices lacinia.
-                                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                                    </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla inceptos, dui per tempor taciti aliquet consequat sodales, curae tristique gravida auctor interdum malesuada sagittis.
-                                        Felis pretium eros ligula natoque ad ante rutrum himenaeos, adipiscing urna mauris porta quam efficitur odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla inceptos, dui per tempor taciti aliquet consequat sodales, curae tristique gravida auctor interdum malesuada sagittis.
-                                        Felis pretium eros ligula natoque ad ante rutrum himenaeos, adipiscing urna mauris porta quam efficitur odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4>Web 2</h4>
-                                <p>App</p>
+                                <h4>Building materials - shop</h4>
+                                <p>My first page ever</p>
                             </div>
                         </li>
                     </ul>
@@ -477,7 +398,9 @@ Yii::$app->session->set('language',$language);
                 selector: '.glightbox2'
             });
         </script>
-    </section><!-- End My Portfolio Section -->
+    </section>
+
+    <!-- End My Portfolio Section -->
 
 
     <!-- ======= Contact Me Section ======= -->

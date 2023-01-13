@@ -140,7 +140,7 @@ echo '" class="h-100">';
 <footer id="footer">
     <div class="container col-12">
         <div class="left">
-            Copyright &copy; 2022 <span>Yelyzaveta Lazarieva</span>. All Rights Reserved
+            Copyright &copy; 2023 <span>Yelyzaveta Lazarieva</span>. All Rights Reserved
         </div>
         <nav id="nav" class="">
             <ul>
@@ -170,6 +170,6 @@ echo '" class="h-100">';
     Favicon
     Dark theme
     Шрифти
-    Languages -> when not the first page (only in dropdown)
+    lang
     contact form
 -->
