@@ -15,6 +15,7 @@ use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 use yii\bootstrap5\Dropdown;
 use yii\helpers\Url;
+use yii\widgets\ActiveForm;
 
 ?>
 
@@ -119,46 +120,6 @@ else{
                 </div>
 
             </div>
-
-<!--            <div class="skills-content ps-lg-4">-->
-<!--                <div class="progress">-->
-<!--                    <span class="skill"><i class="fab fa-html5"></i>HTML <i class="val">80%</i></span>-->
-<!--                    <div class="progress-bar-wrap">-->
-<!--                        <div class="progress-bar w-80" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="progress">-->
-<!--                    <span class="skill"><i class="fab fa-css3-alt"></i>   <i class="fab fa-sass"></i>   CSS, SASS <i class="val">70%</i></span>-->
-<!--                    <div class="progress-bar-wrap">-->
-<!--                        <div class="progress-bar w-70" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="progress">-->
-<!--                    <span class="skill"><i class="fab fa-php"></i>  PHP <i class="val">25%</i></span>-->
-<!--                    <div class="progress-bar-wrap">-->
-<!--                        <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="progress">-->
-<!--                    <span class="skill"><i class="fab fa-js"></i>  JavaScript <i class="val">15%</i></span>-->
-<!--                    <div class="progress-bar-wrap">-->
-<!--                        <div class="progress-bar w-15" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%;"></div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="progress">-->
-<!--                    <span class="skill"><i class="fab fa-bootstrap"></i> Bootstrap <i class="val">98%</i></span>-->
-<!--                    <div class="progress-bar-wrap">-->
-<!--                        <div class="progress-bar w-98" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width: 98%;"></div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="progress">-->
-<!--                    <span class="skill">Yii2 Framework <i class="val">50%</i></span>-->
-<!--                    <div class="progress-bar-wrap">-->
-<!--                        <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
         </div>
     </section><!-- End About Me Section -->
 
@@ -338,7 +299,7 @@ else{
                                                 <?= Yii::t('translations','Contact form')?>
                                             </li>
                                             <li>
-                                                <?= Yii::t('translations','Moreover it is possible to change the language (by default, the language is selected according to the settings of your browser)')?>.
+                                                <?= Yii::t('translations','Moreover it is possible to change the language (by default, the language is selected according to the settings of your browser)')?>
                                             </li>
                                         </ul>
                                         <p>
@@ -417,6 +378,7 @@ else{
                 </div>
 
         </div>
+
         <script src="js/js/valde.min.js"></script>
         <script src="js/js/glightbox.js"></script>
         <script src="js/js/site.js"></script>
@@ -427,10 +389,6 @@ else{
         </script>
     </section>
 
-    <!-- End My Portfolio Section -->
-
-
-    <!-- ======= Contact Me Section ======= -->
     <section id="contact" class="contact">
         <div class="container">
 
@@ -474,34 +432,103 @@ else{
                 </div>
 
                 <div class="col-lg-6">
-                    <form action="../../forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="<?= Yii::t('translations', 'Your name') ?>" required>
-                            </div>
-                            <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="<?= Yii::t('translations', 'Email') ?>" required>
-                            </div>
+                    <?php
+                    $model = new \app\models\ContactForm();
+                    $form = ActiveForm::begin([
+                    'id' => 'my-form',
+                    'options' => ['class' => 'php-email-form'],
+                        'action' => ['site/contact'],
+                        'method' => 'post',
+                    ]) ?>
+
+
+                    <?php
+                    $js = <<<JS
+$(document).ready(function() {
+    $('#my-form').on('submit', function(e) {
+        e.preventDefault(); 
+        $.ajax({
+            url: $(this).attr('action'), // URL для відправки форми
+            type: $(this).attr('method'), // Метод відправки форми (GET або POST)
+            data: $(this).serialize(), // Дані форми
+            success: function(response) {
+                // Відобразити вспливаюче вікно після успішного відправлення форми
+                alert('Форма була успішно надіслана!');
+            },
+            error: function() {
+                // Обробка помилок під час відправлення форми
+                alert('Помилка при надсиланні форми.');
+            }
+        });
+    });
+});
+document.getElementById('my-form').addEventListener('submit', function() {
+    // Add a slight delay to allow the form data to be submitted
+    setTimeout(function() {
+      location.reload();
+    });
+  });
+JS;
+                    $this->registerJs($js);
+                    ?>
+
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <?= $form->field($model, 'name')->label(false)->textInput(['placeholder' => Yii::t('translations', 'Your name')]) ?>
                         </div>
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="<?= Yii::t('translations', 'Subject') ?>">
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <?= $form->field($model, 'email')->label(false)->input('email', ['placeholder' => Yii::t('translations', 'Email')]) ?>
                         </div>
-                        <div class="form-group mt-3">
-                            <textarea class="form-control" name="message" rows="6" placeholder="<?= Yii::t('translations', 'Message') ?>" required></textarea>
+                    </div>
+                    <div class="form-group mt-3">
+                        <?= $form->field($model, 'subject')->label(false)->textInput(['placeholder' => Yii::t('translations', 'Subject')])?>
+                    </div>
+                    <div class="form-group mt-3">
+                        <?= $form->field($model, 'message')->label(false)->textarea(['rows' => 6, 'placeholder' => Yii::t('translations', 'Message')])?>
+                    </div>
+                    <div class="my-3">
+                        <div class="loading"><?= Yii::t('translations', 'Loading') ?></div>
+                        <div class="error-message"></div>
+                        <div class="sent-message"><?= Yii::t('translations', 'Your message has been sent!') ?></div>
+                    </div>
+                    <div class="text-center my-3">
+                        <div class="form-group col-lg-offset-1 col-lg-11">
+                            <?= Html::submitButton(Yii::t('translations', 'Send Message') , ['class' => 'btn btn-primary']) ?>
                         </div>
-                        <div class="my-3">
-                            <div class="loading"><?= Yii::t('translations', 'Loading') ?></div>
-                            <div class="error-message"></div>
-                            <div class="sent-message"><?= Yii::t('translations', 'Your message has been sent!') ?></div>
-                        </div>
-                        <div class="text-center my-3"><button type="submit"><?= Yii::t('translations', 'Send Message') ?></button></div>
-                    </form>
+
                 </div>
 
+                    <?php ActiveForm::end() ?>
+                </div>
+<!--                <div class="col-lg-6">-->
+<!--                    <form action="../entry.php" method="post" role="form" class="php-email-form">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-md-6 form-group">-->
+<!--                                <input type="text" name="name" class="form-control" id="name" placeholder="--><?//= Yii::t('translations', 'Your name') ?><!--" required>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-6 form-group mt-3 mt-md-0">-->
+<!--                                <input type="email" class="form-control" name="email" id="email" placeholder="--><?//= Yii::t('translations', 'Email') ?><!--" required>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form-group mt-3">-->
+<!--                            <input type="text" class="form-control" name="subject" id="subject" placeholder="--><?//= Yii::t('translations', 'Subject') ?><!--">-->
+<!--                        </div>-->
+<!--                        <div class="form-group mt-3">-->
+<!--                            <textarea class="form-control" name="message" rows="6" placeholder="--><?//= Yii::t('translations', 'Message') ?><!--" required></textarea>-->
+<!--                        </div>-->
+<!--                        <div class="my-3">-->
+<!--                            <div class="loading">--><?//= Yii::t('translations', 'Loading') ?><!--</div>-->
+<!--                            <div class="error-message"></div>-->
+<!--                            <div class="sent-message">--><?//= Yii::t('translations', 'Your message has been sent!') ?><!--</div>-->
+<!--                        </div>-->
+<!--                        <div class="text-center my-3"><button type="submit">--><?//= Yii::t('translations', 'Send Message') ?><!--</button></div>-->
+<!--                    </form>-->
+<!--                </div>-->
             </div>
 
         </div>
-    </section><!-- End Contact Me Section -->
+    </section>
 
-</main><!-- End #main -->
+</main>
 
