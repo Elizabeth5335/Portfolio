@@ -323,23 +323,28 @@ else{
                                     <img src="/img/portfolio/portfolio-1.jpg" alt="image" />
                                 </a>
                                 <div class="glightbox-desc custom-desc1">
-                                    <p>
-                                        You can set the position of the description in different ways for example
-                                        <strong style="text-decoration: underline">top, bottom, left or right</strong>
-                                    </p>
-                                    <p>
-                                        <a href="budmaterialy" target="_blank" style="text-decoration: underline; font-weight: bold">Example Google link</a>
-                                        ipsum vehicula eros ultrices lacinia Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Duis quis ipsum vehicula eros ultrices lacinia.
-                                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                                    </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla inceptos, dui per tempor taciti aliquet consequat sodales, curae tristique gravida auctor interdum malesuada sagittis.
-                                        Felis pretium eros ligula natoque ad ante rutrum himenaeos, adipiscing urna mauris porta quam efficitur odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
-                                    <p>
-                                        Primis pharetra facilisis lorem quis penatibus ad nulla inceptos, dui per tempor taciti aliquet consequat sodales, curae tristique gravida auctor interdum malesuada sagittis.
-                                        Felis pretium eros ligula natoque ad ante rutrum himenaeos, adipiscing urna mauris porta quam efficitur odio, sagittis morbi tellus nisi molestie mus faucibus.
-                                    </p>
+                                        <p>
+                                            <a href="#" target="_blank" style="text-decoration: underline; font-weight: bold"><?= Yii::t('translations','Portfolio')?> </a>
+                                            <?= Yii::t('translations','is written using Yii2, bootstrap5 and SASS.')?>
+                                        </p>
+                                        <p>
+                                            <?= Yii::t('translations','This site demonstrates the skills I possess. To a greater extent, the emphasis is on Yii2 and Bootstrap5. Also presented on the site:')?>
+                                        </p>
+                                        <ul style="list-style: circle">
+                                            <li>
+                                                <?= Yii::t('translations','Image Gallery (Lightbox)')?>
+                                            </li>
+                                            <li>
+                                                <?= Yii::t('translations','Contact form')?>
+                                            </li>
+                                            <li>
+                                                <?= Yii::t('translations','Moreover it is possible to change the language (by default, the language is selected according to the settings of your browser)')?>.
+                                            </li>
+                                        </ul>
+                                        <p>
+                                            <?= Yii::t('translations','Source code could be found on GitHub.')?>
+                                            <a href="#git" target="_blank" style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations','Link to Repo')?></a>
+                                        </p>
                                 </div>
                             </div>
                             <div class="portfolio-info">

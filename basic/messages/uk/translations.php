@@ -66,7 +66,10 @@ return [
     'Loading'=>'Зававантаження',
     'Your message has been sent!'=>'Ваше повідомлення було надіслано!',
     'Send Message'=>'Надіслати повідомлення',
-
-
-
+    'is written using Yii2, bootstrap5 and SASS.'=>'Написано з використанням Yii2, bootstrap5 та SASS.',
+    'Source code could be found on GitHub.'=>'Вихідний код можна побачити на GitHub.',
+    'This site demonstrates the skills I possess. To a greater extent, the emphasis is on Yii2 and Bootstrap5. Also presented on the site:'=>'Даний сайт демонструє навички, якими я володію. Більшою мірою акцент зроблено на Yii2 та Bootstrap5. Також на сайті представлені:',
+    'Contact form'=>'форма зв\'язку;',
+    'Image Gallery (Lightbox)'=>'галерея зображень (Lightbox);',
+    'Moreover it is possible to change the language (by default, the language is selected according to the settings of your browser)'=>'До того ж є можливість зміни мови (за замовченням мова обирається відповідно до налаштувань вашого браузера).',
 ];
