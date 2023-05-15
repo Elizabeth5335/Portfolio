@@ -22,8 +22,18 @@ use yii\helpers\Url;
 
 $exp = explode('/',$_SERVER['REQUEST_URI']);
 $language = $exp[1]; // first element before / (slash)
-Yii::$app->language=$language;
-Yii::$app->session->set('language',$language);
+$acceptLang = ['uk', 'en'];
+if( in_array($language, $acceptLang)){
+    Yii::$app->session->set('language',$language);
+    Yii::$app->language=Yii::$app->session->get('language');
+}
+else{
+    $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+    $lang = in_array($lang, $acceptLang) ? $lang : 'en';
+    Yii::$app->language = $_COOKIE['language'] ?? $lang;
+    Yii::$app->session->set('language',$_COOKIE['language'] ?? $lang);
+}
+
 ?>
 <main id="main">
     <!-- ======= About Me Section ======= -->
@@ -41,17 +51,29 @@ Yii::$app->session->set('language',$language);
                     <div class="row">
                         <div class="col-lg-6">
                                 <ul class="customPadding">
-                                    <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Name') ?>:</strong> <span><?= Yii::t('translations', 'Yelyzaveta') ?> <?= Yii::t('translations', 'Lazarieva') ?> </span></li>
-                                    <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Website') ?>:</strong> <a href="#" ><span>www.example.com</span></a></li>
-                                    <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Phone') ?>:</strong> <a href="tel:+380991889215"><span>+380 991 889 215</span></a></li>
-                                    <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'City') ?>:</strong> <span><?= Yii::t('translations', 'Kharkiv, Ukraine') ?></span></li>
+                                    <li>
+                                        <i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Name') ?>: </strong><span><?= Yii::t('translations', 'Yelyzaveta') ?> <?= Yii::t('translations', 'Lazarieva') ?> </span></li>
+                                    <li>
+                                        <i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Website') ?>:</strong> <a href="#" ><span>www.example.com</span></a></li>
+                                    <li>
+                                        <div class="row">
+                                           <div class="col-auto pe-1"><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Phone') ?>:</strong></div>
+                                           <div class="col ps-0"><a href="tel:+380991889215"><span>+380 991 889 215</span></a><br><a href="tel:+48695178074"><span>+48 695 178 074</span></a></div>
+                                        </div>
+                                    </li>
+                                    <li><i class="fa fa-chevron-right"></i> <strong>E-mail:</strong> <a href="mailto:lazareva15elizaveta@gmail.com"><span>lazareva15elizaveta@gmail.com</span></a></li>
                                 </ul>
                             </div>
                         <div class="col-lg-6">
                                 <ul class="customPadding">
                                     <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Birthday') ?>:</strong> <span>15.02.2002</span></li>
-                                    <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Age') ?>:</strong> <span>20</span></li>
-                                    <li><i class="fa fa-chevron-right"></i> <strong>E-mail:</strong> <a href="mailto:lazareva15elizaveta@gmail.com"><span>lazareva15elizaveta@gmail.com</span></a></li>
+                                    <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Age') ?>:</strong> <span>21</span></li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-auto pe-1"><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'City') ?>:</strong></div>
+                                            <div class="col ps-0"><span><?= Yii::t('translations', 'Kharkiv, Ukraine') ?><br><?= Yii::t('translations', 'Łódź, Poland') ?></span></div>
+                                        </div>
+                                    </li>
                                     <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Education') ?>:</strong> <span><?= Yii::t('translations', 'V.N.Karazin Kharkiv National University') ?></span></li>
                                 </ul>
                             </div>
@@ -153,11 +175,11 @@ Yii::$app->session->set('language',$language);
                     <h3 class="resume-title"><?= Yii::t('translations', 'Summary') ?></h3>
                     <div class="resume-item pb-0">
                         <h4><?= Yii::t('translations', 'Yelyzaveta') ?> <?= Yii::t('translations', 'Lazarieva') ?></h4>
-                        <p><em>Наразі я студентка четвертого курсу. Маю досвід роботи в якості Front-End розробника.</em></p>
+                        <p><em><?= Yii::t('translations', 'Now I am a 4th year student. I have almost a year experience in Frontend developing.') ?></em></p>
                         <p>
                         <ul>
                             <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Kharkiv, Ukraine') ?></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="tel:+380991889215">+380 991 889 215</a></li>
+                            <li><i class="fa fa-chevron-right"></i> <a href="tel:+380991889215">+380 991 889 215</a>;  <a href="tel:+48695178074">+48 695 178 074</a></li>
                             <li><i class="fa fa-chevron-right"></i> <a href="mailto:lazareva15elizaveta@gmail.com"><span>lazareva15elizaveta@gmail.com</span></a></li>
                         </ul>
                         </p>
@@ -171,7 +193,7 @@ Yii::$app->session->set('language',$language);
                         <ul>
                             <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Update legacy project to Bootstrap5') ?></li>
                             <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Make layouts responsive') ?></li>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Create new webpages using YII2 framework') ?></li>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Work with YII2 and .net frameworks') ?></li>
                             <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Work with database (SQL)') ?></li>
                         </ul>
                         </p>
@@ -268,7 +290,7 @@ Yii::$app->session->set('language',$language);
                         <ul class="mx-auto customPadding">
                             <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I am addicted to plants') ?></li>
                             <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I play guitar and piano') ?></li>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I started to learn 7 languages, but speak 4.5') ?></li>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I started to learn 8 languages, but speak 4.5') ?></li>
                             <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I drink a looooot of tea') ?></li>
                             <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I dream of having a cat') ?></li>
                             <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'In 2021 I won an award from \'She is Science\' for the best essay about female scientist') ?></li>
@@ -297,7 +319,7 @@ Yii::$app->session->set('language',$language);
                     <ul class="box-container m-auto p-3">
                         <li class="box">
                             <div class="portfolio-img">
-                                <a href="/img/portfolio/portfolio-1.jpg" class="glightbox2" data-glightbox="title: My Title; description: .custom-desc1; descPosition: left;">
+                                <a href="/img/portfolio/portfolio-1.jpg" class="glightbox2" data-glightbox="title: <?= Yii::t('translations','Portfolio')?>; description: .custom-desc1; descPosition: left;">
                                     <img src="/img/portfolio/portfolio-1.jpg" alt="image" />
                                 </a>
                                 <div class="glightbox-desc custom-desc1">
@@ -321,8 +343,8 @@ Yii::$app->session->set('language',$language);
                                 </div>
                             </div>
                             <div class="portfolio-info">
-                                <h4>Current portfolio</h4>
-                                <p>Web page made with Yii2</p>
+                                <h4><?= Yii::t('translations','Portfolio')?></h4>
+                                <p><?= Yii::t('translations','Made with Yii2')?> </p>
                             </div>
                         </li>
                     </ul>
@@ -332,29 +354,29 @@ Yii::$app->session->set('language',$language);
                     <ul class="box-container m-auto p-3">
                         <li class="box">
                             <div class="portfolio-img">
-                                <a href="/img/portfolio/portfolio-2.jpg" class="glightbox2" data-glightbox="title: First portfolio; description: .custom-desc2; descPosition: left;">
+                                <a href="/img/portfolio/portfolio-2.jpg" class="glightbox2" data-glightbox="title: <?= Yii::t('translations','First Resume')?> ; description: .custom-desc2; descPosition: left;">
                                     <img src="/img/portfolio/portfolio-2.jpg" alt="image" />
                                 </a>
                                 <div class="glightbox-desc custom-desc2">
                                     <p>
-                                        <a href="https://elizabeth5335.github.io/Resume/" target="_blank" style="text-decoration: underline; font-weight: bold">First Resume </a>
-                                        was a kind of test project to show my bootstrap 5 skills.
+                                        <a href="https://elizabeth5335.github.io/Resume/" target="_blank" style="text-decoration: underline; font-weight: bold"><?= Yii::t('translations','First Resume')?> </a>
+                                        <?= Yii::t('translations','was a kind of test project to show my bootstrap 5 skills.')?>
                                     </p>
                                     <p>
-                                        It is a one-page website with adaptive layout. It was written using HTML (bootstrap 5), CSS and some JavaScript for animations.
+                                        <?= Yii::t('translations','It is a one-page website with adaptive layout. It was written using HTML (bootstrap 5), CSS and some JavaScript for animations.')?>
                                     </p>
                                     <p>
-                                        The aim of this project was to show my ability to work with bootstrap 5: create responsive tables, long descriptions, images and so on.
+                                        <?= Yii::t('translations','The aim of this project was to show my ability to work with bootstrap 5: create responsive tables, long descriptions, images and so on.')?>
                                     </p>
                                     <p>
-                                        It was hosted on GitHub Pages.
-                                        <a href="https://github.com/Elizabeth5335/Resume" target="_blank" style="text-decoration: underline; font-weight: bold"><br>Link to Repo</a>
+                                        <?= Yii::t('translations','It was hosted on GitHub Pages.')?>
+                                        <a href="https://github.com/Elizabeth5335/Resume" target="_blank" style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations','Link to Repo')?></a>
                                     </p>
                                 </div>
                             </div>
                             <div class="portfolio-info">
-                                <h4>First Resume</h4>
-                                <p>Made with bootstrap 5</p>
+                                <h4><?= Yii::t('translations','First Resume')?></h4>
+                                <p><?= Yii::t('translations','Made with bootstrap 5')?></p>
                             </div>
                         </li>
                     </ul>
@@ -364,26 +386,26 @@ Yii::$app->session->set('language',$language);
                     <ul class="box-container m-auto p-3">
                         <li class="box">
                             <div class="portfolio-img">
-                                <a href="/img/portfolio/portfolio-3.jpg" class="glightbox2" data-glightbox="title: Building materials; description: .custom-desc3; descPosition: left;">
+                                <a href="/img/portfolio/portfolio-3.jpg" class="glightbox2" data-glightbox="title: <?= Yii::t('translations', 'Building Materials') ?>; description: .custom-desc3; descPosition: left;">
                                     <img src="/img/portfolio/portfolio-3.jpg" alt="image" />
                                 </a>
                                 <div class="glightbox-desc custom-desc3">
                                     <p>
-                                        <a href="https://elizabeth5335.github.io/Budmaterialy/" target="_blank" style="text-decoration: underline; font-weight: bold">Building materials </a>
-                                        was my first attempt to create a web page.
+                                        <a href="https://elizabeth5335.github.io/Budmaterialy/" target="_blank" style="text-decoration: underline; font-weight: bold"><?= Yii::t('translations', 'Building Materials') ?> </a>
+                                        <?= Yii::t('translations', 'was my first attempt to create a web page.') ?>
                                     </p>
                                     <p>
-                                        It is a one-page website with adaptive layout. It was written without any frameworks - using bare HTML and CSS. Some JavaScript fragments were used to create responsive navigation and a "scroll to top" button.
+                                        <?= Yii::t('translations', 'It is a one-page website with adaptive layout. It was written without any frameworks - using bare HTML and CSS. Some JavaScript fragments were used to create responsive navigation and a "scroll to top" button.') ?>
                                     </p>
                                     <p>
-                                        It was hosted on GitHub Pages.
-                                        <a href="https://github.com/Elizabeth5335/Budmaterialy" target="_blank" style="text-decoration: underline; font-weight: bold"><br>Link to Repo</a>
+                                        <?= Yii::t('translations','It was hosted on GitHub Pages.')?>
+                                        <a href="https://github.com/Elizabeth5335/Budmaterialy" target="_blank" style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations','Link to Repo')?></a>
                                     </p>
                                 </div>
                             </div>
                             <div class="portfolio-info">
-                                <h4>Building materials - shop</h4>
-                                <p>My first page ever</p>
+                                <h4><?= Yii::t('translations','Building materials - online shop')?></h4>
+                                <p><?= Yii::t('translations','My first page ever')?></p>
                             </div>
                         </li>
                     </ul>
@@ -432,14 +454,14 @@ Yii::$app->session->set('language',$language);
                             <div class="info-box mt-4">
                                 <i class="fas fa-envelope"></i>
                                 <h3>E-mail</h3>
-                                <p><a href="mailto:lazareva15elizaveta@gmail.com">lazareva15elizaveta@gmail.com</a> </p>
+                                <p><a href="mailto:lazareva15elizaveta@gmail.com"><br>lazareva15elizaveta@gmail.com</a></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="info-box mt-4">
                                 <i class="fas fa-phone-alt"></i>
                                 <h3><?= Yii::t('translations', 'Phone') ?></h3>
-                                <p><a href="+380991889215">+380 991 889 215</a></p>
+                                <p><a href="+380991889215">+380 991 889 215</a><br><a href="+48695178074">+48 695 178 074</a></p>
                             </div>
                         </div>
                     </div>
@@ -450,24 +472,24 @@ Yii::$app->session->set('language',$language);
                     <form action="../../forms/contact.php" method="post" role="form" class="php-email-form">
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="<?= Yii::t('translations', 'Your name') ?>" required>
                             </div>
                             <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="<?= Yii::t('translations', 'Email') ?>" required>
                             </div>
                         </div>
                         <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="<?= Yii::t('translations', 'Subject') ?>">
                         </div>
                         <div class="form-group mt-3">
-                            <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                            <textarea class="form-control" name="message" rows="6" placeholder="<?= Yii::t('translations', 'Message') ?>" required></textarea>
                         </div>
                         <div class="my-3">
-                            <div class="loading">Loading</div>
+                            <div class="loading"><?= Yii::t('translations', 'Loading') ?></div>
                             <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                            <div class="sent-message"><?= Yii::t('translations', 'Your message has been sent!') ?></div>
                         </div>
-                        <div class="text-center"><button type="submit">Send Message</button></div>
+                        <div class="text-center my-3"><button type="submit"><?= Yii::t('translations', 'Send Message') ?></button></div>
                     </form>
                 </div>
 

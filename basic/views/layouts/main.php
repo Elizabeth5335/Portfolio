@@ -32,8 +32,20 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => '@w
 
 $exp = explode('/',$_SERVER['REQUEST_URI']);
 $language = $exp[1]; // first element before / (slash)
-Yii::$app->language=Yii::$app->session->get('language');
-Yii::$app->session->set('language',$language);
+$acceptLang = ['uk', 'en'];
+if( in_array($language, $acceptLang)){
+    Yii::$app->session->set('language',$language);
+    Yii::$app->language=Yii::$app->session->get('language');
+}
+else{
+    $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+    //$acceptLang = ['uk', 'en'];
+    $lang = in_array($lang, $acceptLang) ? $lang : 'en';
+    Yii::$app->language = $_COOKIE['language'] ?? $lang;
+    Yii::$app->session->set('language',$_COOKIE['language'] ?? $lang);
+}
+
+
 echo '<html lang="';
 echo Yii::$app->session->get('language');
 echo '" class="h-100">';
@@ -84,15 +96,15 @@ echo '" class="h-100">';
 <header id="header" class="fixed-top d-flex justify-content-end align-items-end header-transparent pe-4">
     <?php
     $current_url_lang = Yii::$app->request->url;
-    if (str_contains($current_url_lang, "ua")) {
+    if (str_contains($current_url_lang, "uk")) {
         $params = explode("/",$current_url_lang);
         $query = "";
         if(!empty($params[2])){
             $query = '/'.$params[2];
         }
         $current_url_lang = $query;
-        Yii::$app->language='ua';
-        Yii::$app->session->set('language','ua');
+        Yii::$app->language='uk';
+        Yii::$app->session->set('language','uk');
         }
     else if (str_contains($current_url_lang, "en")) {
         $params = explode("/",$current_url_lang);
@@ -104,7 +116,8 @@ echo '" class="h-100">';
         Yii::$app->language='en';
         Yii::$app->session->set('language','en');
     }
-
+    else if ($current_url_lang=="/")
+        $current_url_lang = "";
 
     ?>
 
@@ -118,7 +131,7 @@ echo '" class="h-100">';
             <li class="dropdown"><a href="#"><span><?= Yii::t('translations', 'Language') ?></span> <i class="fa fa-chevron-down"></i></a>
                 <ul>
                     <li><a href="/en<?= $current_url_lang?>">en</a></li>
-                    <li><a href="/ua<?= $current_url_lang?>">ua</a></li>
+                    <li><a href="/uk<?= $current_url_lang?>">ua</a></li>
                 </ul>
             </li>
         </ul>
@@ -144,7 +157,7 @@ echo '" class="h-100">';
         </div>
         <nav id="nav" class="">
             <ul>
-                <li><a class="nav-link" href="/"><?= Yii::t('translations', 'Home') ?></a></li>
+                <li><a class="nav-link" href="/<?php echo Yii::$app->language;?>"><?= Yii::t('translations', 'Home') ?></a></li>
                 <li><a class="nav-link scrollto" href="#about"><?= Yii::t('translations', 'About') ?></a></li>
                 <li><a class="nav-link scrollto" href="#resume"><?= Yii::t('translations', 'Resume') ?></a></li>
                 <li><a class="nav-link scrollto " href="#portfolio"><?= Yii::t('translations', 'Portfolio') ?></a></li>

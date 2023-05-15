@@ -4,7 +4,7 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
-    'sourceLanguage'=>'en',
+    //'sourceLanguage'=>'en',
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -59,16 +59,16 @@ $config = [
         'urlManager' => [
 
             'class' => 'app\components\CUrlManager',
-
             'enablePrettyUrl' => true,
-
             'showScriptName' => false,
-
             'rules' => [
+                //'<language:\w+>/'=>'site/index',
                 '<language:\w+>/'=>'site/index',
                 '<language:\w+>/budmaterialy'=>'site/budmaterialy',
             ],
-    ],
+        ],
+
+
         ],
     'params' => $params,
 ];
