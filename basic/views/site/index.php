@@ -343,7 +343,7 @@ else{
                                         </ul>
                                         <p>
                                             <?= Yii::t('translations','Source code could be found on GitHub.')?>
-                                            <a href="#git" target="_blank" style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations','Link to Repo')?></a>
+                                            <a href="https://github.com/Elizabeth5335/Portfolio" target="_blank" style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations','Link to Repo')?></a>
                                         </p>
                                 </div>
                             </div>
