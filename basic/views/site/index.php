@@ -389,6 +389,7 @@ else{
         </script>
     </section>
 
+    <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
         <div class="container">
 

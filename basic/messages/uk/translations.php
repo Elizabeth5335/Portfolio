@@ -49,7 +49,7 @@ return [
     'Now I am a 4th year student. I have almost a year experience in Frontend developing.'=>'Наразі я студентка четвертого курсу. Маю майже рік досвіду у Front-End розробці.',
     'was my first attempt to create a web page.'=>' це моя перша спроба створити веб-сторінку.',
     'Building Materials'=>'Будматеріали',
-    'It is a one-page website with adaptive layout. It was written without any frameworks - using bare HTML and CSS. Some JavaScript fragments were used to create responsive navigation and a "scroll to top" button.'=>'Це односторінковий сайт з адаптивним дизайном. Був напсаний без використання фреймворків - чистий HTML та CSS. Використовувались фрагменти JavaScript для створення адаптивної навігації та кнопки "scroll to top".',
+    'It is a one-page website with adaptive layout. It was written without any frameworks - using bare HTML and CSS. Some JavaScript fragments were used to create responsive navigation and a "scroll to top" button.'=>'Це односторінковий сайт з адаптивним дизайном. Був написаний без використання фреймворків - чистий HTML та CSS. Використовувались фрагменти JavaScript для створення адаптивної навігації та кнопки "scroll to top".',
     'It was hosted on GitHub Pages.'=>'Сайт був розміщений на GitHub Pages.',
     'Link to Repo'=>'Посилання на репозиторій',
     'Building materials - online shop'=>'Онлайн-магазин "Будматеріали"',
