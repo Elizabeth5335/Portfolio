@@ -1,0 +1,6 @@
+{
+    "require": {
+        "elasticemail/elasticemail-php": "^4.0",
+        "elastic-email/web-api-client": "^1.0"
+    }
+}
