@@ -21,18 +21,17 @@ use yii\widgets\ActiveForm;
 
 <?php
 
-$exp = explode('/',$_SERVER['REQUEST_URI']);
+$exp = explode('/', $_SERVER['REQUEST_URI']);
 $language = $exp[1]; // first element before / (slash)
 $acceptLang = ['uk', 'en'];
-if( in_array($language, $acceptLang)){
-    Yii::$app->session->set('language',$language);
-    Yii::$app->language=Yii::$app->session->get('language');
-}
-else{
+if (in_array($language, $acceptLang)) {
+    Yii::$app->session->set('language', $language);
+    Yii::$app->language = Yii::$app->session->get('language');
+} else {
     $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
     $lang = in_array($lang, $acceptLang) ? $lang : 'en';
     Yii::$app->language = $_COOKIE['language'] ?? $lang;
-    Yii::$app->session->set('language',$_COOKIE['language'] ?? $lang);
+    Yii::$app->session->set('language', $_COOKIE['language'] ?? $lang);
 }
 
 ?>
@@ -51,46 +50,63 @@ else{
                 <div class="col-md-6 col-lg-8 d-flex flex-column align-items-stretch justify-content-center justify-content-lg-start">
                     <div class="row">
                         <div class="col-lg-6">
-                                <ul class="customPadding">
-                                    <li>
-                                        <i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Name') ?>: </strong><span><?= Yii::t('translations', 'Yelyzaveta') ?> <?= Yii::t('translations', 'Lazarieva') ?> </span></li>
-                                    <li>
-                                        <i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Website') ?>:</strong> <a href="#" ><span>www.example.com</span></a></li>
-                                    <li>
-                                        <div class="row">
-                                           <div class="col-auto pe-1"><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Phone') ?>:</strong></div>
-                                           <div class="col ps-0"><a href="tel:+380991889215"><span>+380 991 889 215</span></a><br><a href="tel:+48695178074"><span>+48 695 178 074</span></a></div>
-                                        </div>
-                                    </li>
-                                    <li><i class="fa fa-chevron-right"></i> <strong>E-mail:</strong> <a href="mailto:lazareva15elizaveta@gmail.com"><span>lazareva15elizaveta@gmail.com</span></a></li>
-                                </ul>
-                            </div>
+                            <ul class="customPadding">
+                                <li>
+                                    <i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Name') ?>
+                                        : </strong><span><?= Yii::t('translations', 'Yelyzaveta') ?> <?= Yii::t('translations', 'Lazarieva') ?> </span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Website') ?>
+                                        :</strong> <a href="#"><span>www.example.com</span></a></li>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-auto pe-1"><i class="fa fa-chevron-right"></i>
+                                            <strong><?= Yii::t('translations', 'Phone') ?>:</strong></div>
+                                        <div class="col ps-0"><a href="tel:+380991889215"><span>+380 991 889 215</span></a><br><a
+                                                    href="tel:+48695178074"><span>+48 695 178 074</span></a></div>
+                                    </div>
+                                </li>
+                                <li><i class="fa fa-chevron-right"></i> <strong>E-mail:</strong> <a
+                                            href="mailto:lazareva15elizaveta@gmail.com"><span>lazareva15elizaveta@gmail.com</span></a>
+                                </li>
+                            </ul>
+                        </div>
                         <div class="col-lg-6">
-                                <ul class="customPadding">
-                                    <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Birthday') ?>:</strong> <span>15.02.2002</span></li>
-                                    <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Age') ?>:</strong> <span>21</span></li>
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-auto pe-1"><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'City') ?>:</strong></div>
-                                            <div class="col ps-0"><span><?= Yii::t('translations', 'Kharkiv, Ukraine') ?><br><?= Yii::t('translations', 'Łódź, Poland') ?></span></div>
+                            <ul class="customPadding">
+                                <li><i class="fa fa-chevron-right"></i>
+                                    <strong><?= Yii::t('translations', 'Birthday') ?>:</strong> <span>15.02.2002</span>
+                                </li>
+                                <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Age') ?>
+                                        :</strong> <span>21</span></li>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-auto pe-1"><i class="fa fa-chevron-right"></i>
+                                            <strong><?= Yii::t('translations', 'City') ?>:</strong></div>
+                                        <div class="col ps-0">
+                                            <span><?= Yii::t('translations', 'Kharkiv, Ukraine') ?><br><?= Yii::t('translations', 'Łódź, Poland') ?></span>
                                         </div>
-                                    </li>
-                                    <li><i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Education') ?>:</strong> <span><?= Yii::t('translations', 'V.N.Karazin Kharkiv National University') ?></span></li>
-                                </ul>
-                            </div>
+                                    </div>
+                                </li>
+                                <li><i class="fa fa-chevron-right"></i>
+                                    <strong><?= Yii::t('translations', 'Education') ?>:</strong>
+                                    <span><?= Yii::t('translations', 'V.N.Karazin Kharkiv National University') ?></span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="">
                         <h3 class="text-center mb-3"><?= Yii::t('translations', 'My skills') ?></h3>
                         <div class="row skills text-center">
                             <div class="col-sm-3 col-4">
-                                <h1> <i class="fab fa-html5"></i></h1>
+                                <h1><i class="fab fa-html5"></i></h1>
                                 <h5>HTML</h5>
                             </div>
                             <div class="col-sm-3 col-4">
-                                <h1> <i class="fab fa-css3-alt"></i></h1>
+                                <h1><i class="fab fa-css3-alt"></i></h1>
                                 <h5>CSS</h5>
-                            </div><div class="col-sm-3 col-4">
+                            </div>
+                            <div class="col-sm-3 col-4">
                                 <h1><i class="fab fa-sass"></i></h1>
                                 <h5>SASS</h5>
                             </div>
@@ -136,12 +152,18 @@ else{
                     <h3 class="resume-title"><?= Yii::t('translations', 'Summary') ?></h3>
                     <div class="resume-item pb-0">
                         <h4><?= Yii::t('translations', 'Yelyzaveta') ?> <?= Yii::t('translations', 'Lazarieva') ?></h4>
-                        <p><em><?= Yii::t('translations', 'Now I am a 4th year student. I have almost a year experience in Frontend developing.') ?></em></p>
+                        <p>
+                            <em><?= Yii::t('translations', 'Now I am a 4th year student. I have almost a year experience in Frontend developing.') ?></em>
+                        </p>
                         <p>
                         <ul>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Kharkiv, Ukraine') ?></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="tel:+380991889215">+380 991 889 215</a>;  <a href="tel:+48695178074">+48 695 178 074</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="mailto:lazareva15elizaveta@gmail.com"><span>lazareva15elizaveta@gmail.com</span></a></li>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Kharkiv, Ukraine') ?>
+                            </li>
+                            <li><i class="fa fa-chevron-right"></i> <a href="tel:+380991889215">+380 991 889 215</a>; <a
+                                        href="tel:+48695178074">+48 695 178 074</a></li>
+                            <li><i class="fa fa-chevron-right"></i> <a
+                                        href="mailto:lazareva15elizaveta@gmail.com"><span>lazareva15elizaveta@gmail.com</span></a>
+                            </li>
                         </ul>
                         </p>
                     </div>
@@ -152,10 +174,18 @@ else{
                         <p><em><?= Yii::t('translations', 'VESCOM, Łódź, Poland') ?></em></p>
                         <p>
                         <ul>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Update legacy project to Bootstrap5') ?></li>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Make layouts responsive') ?></li>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Work with YII2 and .net frameworks') ?></li>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Work with database (SQL)') ?></li>
+                            <li>
+                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Update legacy project to Bootstrap5') ?>
+                            </li>
+                            <li>
+                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Make layouts responsive') ?>
+                            </li>
+                            <li>
+                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Work with YII2 and .net frameworks') ?>
+                            </li>
+                            <li>
+                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Work with database (SQL)') ?>
+                            </li>
                         </ul>
                         </p>
                     </div>
@@ -166,7 +196,8 @@ else{
                     <div class="resume-item">
                         <h4><?= Yii::t('translations', 'V.N.Karazin Kharkiv National University') ?></h4>
                         <h5>2019 - 2023</h5>
-                        <p><em><?= Yii::t('translations', 'Faculty of Computer Science') ?>, <?= Yii::t('translations', 'Speciality: Cyber-security') ?></em></p>
+                        <p><em><?= Yii::t('translations', 'Faculty of Computer Science') ?>
+                                , <?= Yii::t('translations', 'Speciality: Cyber-security') ?></em></p>
                     </div>
                     <div class="resume-item">
                         <h4><?= Yii::t('translations', 'University of Łódź') ?></h4>
@@ -204,13 +235,20 @@ else{
 
                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                             <ol class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                        aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                                        aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                                        aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                                        aria-label="Slide 7"></button>
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -235,11 +273,13 @@ else{
                                     <img src="img/soup.jpg" class="d-block w-100" alt="soup">
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
@@ -249,13 +289,27 @@ else{
                     </div>
                     <div class="col-xs-12 col-md-6">
                         <ul class="mx-auto customPadding">
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I am addicted to plants') ?></li>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I play guitar and piano') ?></li>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I started to learn 8 languages, but speak 4.5') ?></li>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I drink a looooot of tea') ?></li>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I dream of having a cat') ?></li>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'In 2021 I won an award from \'She is Science\' for the best essay about female scientist') ?></li>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I enjoy cooking, especially soups') ?></li>
+                            <li>
+                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I am addicted to plants') ?>
+                            </li>
+                            <li>
+                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I play guitar and piano') ?>
+                            </li>
+                            <li>
+                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I started to learn 8 languages, but speak 4.5') ?>
+                            </li>
+                            <li>
+                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I drink a looooot of tea') ?>
+                            </li>
+                            <li>
+                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I dream of having a cat') ?>
+                            </li>
+                            <li>
+                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'In 2021 I won an award from \'She is Science\' for the best essay about female scientist') ?>
+                            </li>
+                            <li>
+                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I enjoy cooking, especially soups') ?>
+                            </li>
 
                         </ul>
                     </div>
@@ -280,37 +334,41 @@ else{
                     <ul class="box-container m-auto p-3">
                         <li class="box">
                             <div class="portfolio-img">
-                                <a href="/img/portfolio/portfolio-1.jpg" class="glightbox2" data-glightbox="title: <?= Yii::t('translations','Portfolio')?>; description: .custom-desc1; descPosition: left;">
-                                    <img src="/img/portfolio/portfolio-1.jpg" alt="image" />
+                                <a href="/img/portfolio/portfolio-1.jpg" class="glightbox2"
+                                   data-glightbox="title: <?= Yii::t('translations', 'Portfolio') ?>; description: .custom-desc1; descPosition: left;">
+                                    <img src="/img/portfolio/portfolio-1.jpg" alt="image"/>
                                 </a>
                                 <div class="glightbox-desc custom-desc1">
-                                        <p>
-                                            <a href="#" target="_blank" style="text-decoration: underline; font-weight: bold"><?= Yii::t('translations','Portfolio')?> </a>
-                                            <?= Yii::t('translations','is written using Yii2, bootstrap5 and SASS.')?>
-                                        </p>
-                                        <p>
-                                            <?= Yii::t('translations','This site demonstrates the skills I possess. To a greater extent, the emphasis is on Yii2 and Bootstrap5. Also presented on the site:')?>
-                                        </p>
-                                        <ul style="list-style: circle">
-                                            <li>
-                                                <?= Yii::t('translations','Image Gallery (Lightbox)')?>
-                                            </li>
-                                            <li>
-                                                <?= Yii::t('translations','Contact form')?>
-                                            </li>
-                                            <li>
-                                                <?= Yii::t('translations','Moreover it is possible to change the language (by default, the language is selected according to the settings of your browser)')?>
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            <?= Yii::t('translations','Source code could be found on GitHub.')?>
-                                            <a href="https://github.com/Elizabeth5335/Portfolio" target="_blank" style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations','Link to Repo')?></a>
-                                        </p>
+                                    <p>
+                                        <a href="#" target="_blank"
+                                           style="text-decoration: underline; font-weight: bold"><?= Yii::t('translations', 'Portfolio') ?> </a>
+                                        <?= Yii::t('translations', 'is written using Yii2, bootstrap5 and SASS.') ?>
+                                    </p>
+                                    <p>
+                                        <?= Yii::t('translations', 'This site demonstrates the skills I possess. To a greater extent, the emphasis is on Yii2 and Bootstrap5. Also presented on the site:') ?>
+                                    </p>
+                                    <ul style="list-style: circle">
+                                        <li>
+                                            <?= Yii::t('translations', 'Image Gallery (Lightbox)') ?>
+                                        </li>
+                                        <li>
+                                            <?= Yii::t('translations', 'Contact form') ?>
+                                        </li>
+                                        <li>
+                                            <?= Yii::t('translations', 'Moreover it is possible to change the language (by default, the language is selected according to the settings of your browser)') ?>
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        <?= Yii::t('translations', 'Source code could be found on GitHub.') ?>
+                                        <a href="https://github.com/Elizabeth5335/Portfolio" target="_blank"
+                                           style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations', 'Link to Repo') ?>
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                             <div class="portfolio-info">
-                                <h4><?= Yii::t('translations','Portfolio')?></h4>
-                                <p><?= Yii::t('translations','Made with Yii2')?> </p>
+                                <h4><?= Yii::t('translations', 'Portfolio') ?></h4>
+                                <p><?= Yii::t('translations', 'Made with Yii2') ?> </p>
                             </div>
                         </li>
                     </ul>
@@ -320,29 +378,33 @@ else{
                     <ul class="box-container m-auto p-3">
                         <li class="box">
                             <div class="portfolio-img">
-                                <a href="/img/portfolio/portfolio-2.jpg" class="glightbox2" data-glightbox="title: <?= Yii::t('translations','First Resume')?> ; description: .custom-desc2; descPosition: left;">
-                                    <img src="/img/portfolio/portfolio-2.jpg" alt="image" />
+                                <a href="/img/portfolio/portfolio-2.jpg" class="glightbox2"
+                                   data-glightbox="title: <?= Yii::t('translations', 'First Resume') ?> ; description: .custom-desc2; descPosition: left;">
+                                    <img src="/img/portfolio/portfolio-2.jpg" alt="image"/>
                                 </a>
                                 <div class="glightbox-desc custom-desc2">
                                     <p>
-                                        <a href="https://elizabeth5335.github.io/Resume/" target="_blank" style="text-decoration: underline; font-weight: bold"><?= Yii::t('translations','First Resume')?> </a>
-                                        <?= Yii::t('translations','was a kind of test project to show my bootstrap 5 skills.')?>
+                                        <a href="https://elizabeth5335.github.io/Resume/" target="_blank"
+                                           style="text-decoration: underline; font-weight: bold"><?= Yii::t('translations', 'First Resume') ?> </a>
+                                        <?= Yii::t('translations', 'was a kind of test project to show my bootstrap 5 skills.') ?>
                                     </p>
                                     <p>
-                                        <?= Yii::t('translations','It is a one-page website with adaptive layout. It was written using HTML (bootstrap 5), CSS and some JavaScript for animations.')?>
+                                        <?= Yii::t('translations', 'It is a one-page website with adaptive layout. It was written using HTML (bootstrap 5), CSS and some JavaScript for animations.') ?>
                                     </p>
                                     <p>
-                                        <?= Yii::t('translations','The aim of this project was to show my ability to work with bootstrap 5: create responsive tables, long descriptions, images and so on.')?>
+                                        <?= Yii::t('translations', 'The aim of this project was to show my ability to work with bootstrap 5: create responsive tables, long descriptions, images and so on.') ?>
                                     </p>
                                     <p>
-                                        <?= Yii::t('translations','It was hosted on GitHub Pages.')?>
-                                        <a href="https://github.com/Elizabeth5335/Resume" target="_blank" style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations','Link to Repo')?></a>
+                                        <?= Yii::t('translations', 'It was hosted on GitHub Pages.') ?>
+                                        <a href="https://github.com/Elizabeth5335/Resume" target="_blank"
+                                           style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations', 'Link to Repo') ?>
+                                        </a>
                                     </p>
                                 </div>
                             </div>
                             <div class="portfolio-info">
-                                <h4><?= Yii::t('translations','First Resume')?></h4>
-                                <p><?= Yii::t('translations','Made with bootstrap 5')?></p>
+                                <h4><?= Yii::t('translations', 'First Resume') ?></h4>
+                                <p><?= Yii::t('translations', 'Made with bootstrap 5') ?></p>
                             </div>
                         </li>
                     </ul>
@@ -352,41 +414,45 @@ else{
                     <ul class="box-container m-auto p-3">
                         <li class="box">
                             <div class="portfolio-img">
-                                <a href="/img/portfolio/portfolio-3.jpg" class="glightbox2" data-glightbox="title: <?= Yii::t('translations', 'Building Materials') ?>; description: .custom-desc3; descPosition: left;">
-                                    <img src="/img/portfolio/portfolio-3.jpg" alt="image" />
+                                <a href="/img/portfolio/portfolio-3.jpg" class="glightbox2"
+                                   data-glightbox="title: <?= Yii::t('translations', 'Building Materials') ?>; description: .custom-desc3; descPosition: left;">
+                                    <img src="/img/portfolio/portfolio-3.jpg" alt="image"/>
                                 </a>
                                 <div class="glightbox-desc custom-desc3">
                                     <p>
-                                        <a href="https://elizabeth5335.github.io/Budmaterialy/" target="_blank" style="text-decoration: underline; font-weight: bold"><?= Yii::t('translations', 'Building Materials') ?> </a>
+                                        <a href="https://elizabeth5335.github.io/Budmaterialy/" target="_blank"
+                                           style="text-decoration: underline; font-weight: bold"><?= Yii::t('translations', 'Building Materials') ?> </a>
                                         <?= Yii::t('translations', 'was my first attempt to create a web page.') ?>
                                     </p>
                                     <p>
                                         <?= Yii::t('translations', 'It is a one-page website with adaptive layout. It was written without any frameworks - using bare HTML and CSS. Some JavaScript fragments were used to create responsive navigation and a "scroll to top" button.') ?>
                                     </p>
                                     <p>
-                                        <?= Yii::t('translations','It was hosted on GitHub Pages.')?>
-                                        <a href="https://github.com/Elizabeth5335/Budmaterialy" target="_blank" style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations','Link to Repo')?></a>
+                                        <?= Yii::t('translations', 'It was hosted on GitHub Pages.') ?>
+                                        <a href="https://github.com/Elizabeth5335/Budmaterialy" target="_blank"
+                                           style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations', 'Link to Repo') ?>
+                                        </a>
                                     </p>
                                 </div>
                             </div>
                             <div class="portfolio-info">
-                                <h4><?= Yii::t('translations','Building materials - online shop')?></h4>
-                                <p><?= Yii::t('translations','My first page ever')?></p>
+                                <h4><?= Yii::t('translations', 'Building materials - online shop') ?></h4>
+                                <p><?= Yii::t('translations', 'My first page ever') ?></p>
                             </div>
                         </li>
                     </ul>
                 </div>
 
-        </div>
+            </div>
 
-        <script src="js/js/valde.min.js"></script>
-        <script src="js/js/glightbox.js"></script>
-        <script src="js/js/site.js"></script>
-        <script>
-            var lightboxDescription = GLightbox({
-                selector: '.glightbox2'
-            });
-        </script>
+            <script src="js/js/valde.min.js"></script>
+            <script src="js/js/glightbox.js"></script>
+            <script src="js/js/site.js"></script>
+            <script>
+                var lightboxDescription = GLightbox({
+                    selector: '.glightbox2'
+                });
+            </script>
     </section>
 
     <!-- ======= Contact Section ======= -->
@@ -408,9 +474,12 @@ else{
                                 <i class="fas fa-share-alt"></i>
                                 <h3><?= Yii::t('translations', 'Social Profiles') ?></h3>
                                 <div class="social-links">
-                                    <a href="https://www.facebook.com/profile.php?id=100046831201474" class="facebook"><i class="fab fa-facebook"></i></a>
-                                    <a href="https://instagram.com/eli_che_va?igshid=YmMyMTA2M2Y=" class="instagram"><i class="fab fa-instagram"></i></a>
-                                    <a href="https://www.linkedin.com/in/yelyzaveta-lazarieva-876047235" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://www.facebook.com/profile.php?id=100046831201474"
+                                       class="facebook"><i class="fab fa-facebook"></i></a>
+                                    <a href="https://instagram.com/eli_che_va?igshid=YmMyMTA2M2Y=" class="instagram"><i
+                                                class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/yelyzaveta-lazarieva-876047235"
+                                       class="linkedin"><i class="fab fa-linkedin"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -418,114 +487,96 @@ else{
                             <div class="info-box mt-4">
                                 <i class="fas fa-envelope"></i>
                                 <h3>E-mail</h3>
-                                <p><a href="mailto:lazareva15elizaveta@gmail.com"><br>lazareva15elizaveta@gmail.com</a></p>
+                                <p><a href="mailto:lazareva15elizaveta@gmail.com"><br>lazareva15elizaveta@gmail.com</a>
+                                </p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="info-box mt-4">
                                 <i class="fas fa-phone-alt"></i>
                                 <h3><?= Yii::t('translations', 'Phone') ?></h3>
-                                <p><a href="+380991889215">+380 991 889 215</a><br><a href="+48695178074">+48 695 178 074</a></p>
+                                <p><a href="+380991889215">+380 991 889 215</a><br><a href="+48695178074">+48 695 178
+                                        074</a></p>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-6" style="max-height: 395px;">
+                    <script>
+                        // JavaScript code
+                        function refreshPage() {
+                            location.reload(); // Reloads the current page
+                        }
+                    </script>
+
+                    <?php if (Yii::$app->session->hasFlash('error')): ?>
+                        <div class="php-email-form" style="height: 100%; text-align: center">
+
+                            <img class="img-fluid" style="max-height: 75%;" src="/img/error.jpg">
+                            <div class="my-2">
+                                <?= Yii::t('translations', 'Something went wrong! Try again.') ?>
+                            </div>
+
+                            <div class="text-center mb-3">
+                                <div class="form-group col-lg-offset-1 col-lg-11">
+                                    <button class="btn btn-primary" type="submit" onclick="refreshPage()"><?= Yii::t('translations', 'Try again') ?></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php elseif (Yii::$app->session->hasFlash('success')): ?>
+                        <div class="php-email-form" style="height: 100%; text-align: center">
+
+                            <img class="img-fluid" style="max-height: 75%;" src="/img/success.jpg">
+                            <div class="my-2">
+                                <?= Yii::t('translations', 'Your message has been sent! I will respond to you as soon as possible.') ?>
+                            </div>
+
+                            <div class="text-center mb-3">
+                                <div class="form-group col-lg-offset-1 col-lg-11">
+                                    <button class="btn btn-primary" type="submit" onclick="refreshPage()"><?= Yii::t('translations', 'Send one more') ?></button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    <?php else: ?>
+
                     <?php
                     $model = new \app\models\ContactForm();
                     $form = ActiveForm::begin([
-                    'id' => 'my-form',
-                    'options' => ['class' => 'php-email-form'],
+                        'id' => 'my-form',
+                        'options' => ['class' => 'php-email-form'],
                         'action' => ['site/contact'],
                         'method' => 'post',
                     ]) ?>
-
-
-                    <?php
-                    $js = <<<JS
-$(document).ready(function() {
-    $('#my-form').on('submit', function(e) {
-        e.preventDefault(); 
-        $.ajax({
-            url: $(this).attr('action'), // URL для відправки форми
-            type: $(this).attr('method'), // Метод відправки форми (GET або POST)
-            data: $(this).serialize(), // Дані форми
-            success: function(response) {
-                // Відобразити вспливаюче вікно після успішного відправлення форми
-                alert('Форма була успішно надіслана!');
-            },
-            error: function() {
-                // Обробка помилок під час відправлення форми
-                alert('Помилка при надсиланні форми.');
-            }
-        });
-    });
-});
-document.getElementById('my-form').addEventListener('submit', function() {
-    // Add a slight delay to allow the form data to be submitted
-    setTimeout(function() {
-      location.reload();
-    });
-  });
-JS;
-                    $this->registerJs($js);
-                    ?>
-
-
-                    <div class="row">
-                        <div class="col-md-6 form-group">
-                            <?= $form->field($model, 'name')->label(false)->textInput(['placeholder' => Yii::t('translations', 'Your name')]) ?>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <?= $form->field($model, 'name')->label(false)->textInput(['placeholder' => Yii::t('translations', 'Your name')]) ?>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <?= $form->field($model, 'email')->label(false)->input('email', ['placeholder' => Yii::t('translations', 'Email')]) ?>
+                            </div>
                         </div>
-                        <div class="col-md-6 form-group mt-3 mt-md-0">
-                            <?= $form->field($model, 'email')->label(false)->input('email', ['placeholder' => Yii::t('translations', 'Email')]) ?>
+                        <div class="form-group mt-3">
+                            <?= $form->field($model, 'subject')->label(false)->textInput(['placeholder' => Yii::t('translations', 'Subject')]) ?>
                         </div>
-                    </div>
-                    <div class="form-group mt-3">
-                        <?= $form->field($model, 'subject')->label(false)->textInput(['placeholder' => Yii::t('translations', 'Subject')])?>
-                    </div>
-                    <div class="form-group mt-3">
-                        <?= $form->field($model, 'message')->label(false)->textarea(['rows' => 6, 'placeholder' => Yii::t('translations', 'Message')])?>
-                    </div>
-                    <div class="my-3">
-                        <div class="loading"><?= Yii::t('translations', 'Loading') ?></div>
-                        <div class="error-message"></div>
-                        <div class="sent-message"><?= Yii::t('translations', 'Your message has been sent!') ?></div>
-                    </div>
-                    <div class="text-center my-3">
-                        <div class="form-group col-lg-offset-1 col-lg-11">
-                            <?= Html::submitButton(Yii::t('translations', 'Send Message') , ['class' => 'btn btn-primary']) ?>
+                        <div class="form-group mt-3">
+                            <?= $form->field($model, 'message')->label(false)->textarea(['rows' => 6, 'placeholder' => Yii::t('translations', 'Message')]) ?>
                         </div>
+                        <div class="text-center my-3">
+                            <div class="form-group col-lg-offset-1 col-lg-11">
+                                <?= Html::submitButton(Yii::t('translations', 'Send Message'), ['class' => 'btn btn-primary']) ?>
+                            </div>
+                        </div>
+                        <?php ActiveForm::end() ?>
+                    <?php endif; ?>
+
 
                 </div>
-
-                    <?php ActiveForm::end() ?>
-                </div>
-<!--                <div class="col-lg-6">-->
-<!--                    <form action="../entry.php" method="post" role="form" class="php-email-form">-->
-<!--                        <div class="row">-->
-<!--                            <div class="col-md-6 form-group">-->
-<!--                                <input type="text" name="name" class="form-control" id="name" placeholder="--><?//= Yii::t('translations', 'Your name') ?><!--" required>-->
-<!--                            </div>-->
-<!--                            <div class="col-md-6 form-group mt-3 mt-md-0">-->
-<!--                                <input type="email" class="form-control" name="email" id="email" placeholder="--><?//= Yii::t('translations', 'Email') ?><!--" required>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="form-group mt-3">-->
-<!--                            <input type="text" class="form-control" name="subject" id="subject" placeholder="--><?//= Yii::t('translations', 'Subject') ?><!--">-->
-<!--                        </div>-->
-<!--                        <div class="form-group mt-3">-->
-<!--                            <textarea class="form-control" name="message" rows="6" placeholder="--><?//= Yii::t('translations', 'Message') ?><!--" required></textarea>-->
-<!--                        </div>-->
-<!--                        <div class="my-3">-->
-<!--                            <div class="loading">--><?//= Yii::t('translations', 'Loading') ?><!--</div>-->
-<!--                            <div class="error-message"></div>-->
-<!--                            <div class="sent-message">--><?//= Yii::t('translations', 'Your message has been sent!') ?><!--</div>-->
-<!--                        </div>-->
-<!--                        <div class="text-center my-3"><button type="submit">--><?//= Yii::t('translations', 'Send Message') ?><!--</button></div>-->
-<!--                    </form>-->
-<!--                </div>-->
             </div>
 
         </div>

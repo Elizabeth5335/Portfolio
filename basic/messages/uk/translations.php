@@ -72,4 +72,10 @@ return [
     'Contact form'=>'форма зв\'язку;',
     'Image Gallery (Lightbox)'=>'галерея зображень (Lightbox);',
     'Moreover it is possible to change the language (by default, the language is selected according to the settings of your browser)'=>'До того ж є можливість зміни мови (за замовченням мова обирається відповідно до налаштувань вашого браузера).',
-];
+    'Your message has been sent! I will respond to you as soon as possible.'=>'Ваше повідомлення надіслано! Я відповім Вам якомога швидше.',
+    'Something went wrong! Try again.'=>'Щось пішло не так! Спробуйте знову.',
+    'Try again'=>'Спробувати знову',
+    'Success'=>'Успіх',
+    'Error'=>'Помилка',
+    'Send one more'=>'Надіслати ще одне'
+    ];

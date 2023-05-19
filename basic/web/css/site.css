@@ -752,13 +752,6 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-.testimonials {
-    padding: 80px 0;
-    background: url("../img/testimonials-bg.jpg") no-repeat;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-}
 
 .testimonials::before {
     content: "";
@@ -1409,12 +1402,7 @@ footer a.top {
 }
 
 
-#yii{
-    background: url("../img/yiiLogo.png") center center;
-    background-size: cover;
-    height: 3rem;
-    width: 3rem;
-}
+
 
 #about h1{
     color: black;
