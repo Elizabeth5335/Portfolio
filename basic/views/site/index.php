@@ -57,7 +57,7 @@ if (in_array($language, $acceptLang)) {
                                 </li>
                                 <li>
                                     <i class="fa fa-chevron-right"></i> <strong><?= Yii::t('translations', 'Website') ?>
-                                        :</strong> <a href="#"><span>www.example.com</span></a></li>
+                                        :</strong> <a href="http://yelyzavetalazarieva.space/"><span>http://yelyzavetalazarieva.space/</span></a></li>
                                 <li>
                                     <div class="row">
                                         <div class="col-auto pe-1"><i class="fa fa-chevron-right"></i>
@@ -123,7 +123,9 @@ if (in_array($language, $acceptLang)) {
                                 <h5>JavaScript</h5>
                             </div>
                             <div class="col-sm-3 col-4">
-                                <div class="mb-3" id="yii"></div>
+                                <div class="" id="yii" style="margin-bottom: 0.5rem;">
+                                    <img src="/img/yii2.png" style="margin-top: 0.6em; height: 3em">
+                                </div>
                                 <h5>Yii2</h5>
                             </div>
                             <div class="col-sm-3 col-4">
@@ -523,7 +525,8 @@ if (in_array($language, $acceptLang)) {
 
                             <div class="text-center mb-3">
                                 <div class="form-group col-lg-offset-1 col-lg-11">
-                                    <button class="btn btn-primary" type="submit" onclick="refreshPage()"><?= Yii::t('translations', 'Try again') ?></button>
+                                    <button class="btn btn-primary" type="submit"
+                                            onclick="refreshPage()"><?= Yii::t('translations', 'Try again') ?></button>
                                 </div>
                             </div>
                         </div>
@@ -538,23 +541,23 @@ if (in_array($language, $acceptLang)) {
 
                             <div class="text-center mb-3">
                                 <div class="form-group col-lg-offset-1 col-lg-11">
-                                    <button class="btn btn-primary" type="submit" onclick="refreshPage()"><?= Yii::t('translations', 'Send one more') ?></button>
+                                    <button class="btn btn-primary" type="submit"
+                                            onclick="refreshPage()"><?= Yii::t('translations', 'Send one more') ?></button>
                                 </div>
                             </div>
                         </div>
 
 
-
                     <?php else: ?>
 
-                    <?php
-                    $model = new \app\models\ContactForm();
-                    $form = ActiveForm::begin([
-                        'id' => 'my-form',
-                        'options' => ['class' => 'php-email-form'],
-                        'action' => ['site/contact'],
-                        'method' => 'post',
-                    ]) ?>
+                        <?php
+                        $model = new \app\models\ContactForm();
+                        $form = ActiveForm::begin([
+                            'id' => 'my-form',
+                            'options' => ['class' => 'php-email-form'],
+                            'action' => ['site/contact'],
+                            'method' => 'post',
+                        ]) ?>
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <?= $form->field($model, 'name')->label(false)->textInput(['placeholder' => Yii::t('translations', 'Your name')]) ?>
