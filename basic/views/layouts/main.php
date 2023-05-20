@@ -20,7 +20,7 @@ $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no']);
 $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
-$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => '@web/favicon.ico']);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => '@public_html/favicon.ico']);
 
 ?>
 <?php $this->beginPage() ?>
@@ -79,7 +79,7 @@ echo '" class="h-100">';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="../../web/js/main.js" type="text/javascript"></script>
+    <script src="../../public_html/js/main.js" type="text/javascript"></script>
 
     <link rel="stylesheet" href="js/css/style.css"/>
     <link rel="stylesheet" href="js/css/glightbox.css"/>

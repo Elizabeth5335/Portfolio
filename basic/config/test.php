@@ -23,7 +23,7 @@ return [
             'messageClass' => 'yii\symfonymailer\Message'
         ],
         'assetManager' => [
-            'basePath' => __DIR__ . '/../web/assets',
+            'basePath' => __DIR__ . '/../public_html/assets',
         ],
         'urlManager' => [
             'showScriptName' => true,
