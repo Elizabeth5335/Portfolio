@@ -497,10 +497,8 @@ if (in_array($language, $acceptLang)) {
                             <div class="info-box mt-4">
                                 <i class="fas fa-phone-alt"></i>
                                 <h3><?= Yii::t('translations', 'Phone') ?></h3>
-                                <p><a href="+380991889215">+380 991 889 215</a><br><a href="+48695178074">+48 695 178
+                                <p><a href="tel:+380991889215">+380 991 889 215</a><br><a href="tel:+48695178074">+48 695 178
                                         074</a></p>
-
-                                <a href="tel:+380991889215"><span>+380 991 889 215</span></a>
                             </div>
                         </div>
                     </div>
