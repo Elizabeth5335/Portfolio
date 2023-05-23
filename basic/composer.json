@@ -22,7 +22,8 @@
         "lajax/yii2-language-picker": "^1.2",
         "elastic-email/web-api-client": "^1.0",
         "elasticemail/elasticemail-php": "^4.0",
-      "ext-curl": "*"
+      "ext-curl": "*",
+        "swiftmailer/swiftmailer": "^6.3"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

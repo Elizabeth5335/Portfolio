@@ -2,7 +2,7 @@
 
 namespace app\controllers;
 
-use app\helpers\ElasticEmailHelper;
+use app\helpers\EmailHelper;
 use yii\helpers\Url;
 use Yii;
 use yii\filters\AccessControl;
@@ -23,16 +23,17 @@ class SiteController extends Controller
 
     public function actionContact(){
         $model = new ContactForm();
-        Yii::$app->session->setFlash('error', 'No data to send email.');
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            $emailSent = ElasticEmailHelper::contact($model);
+            $emailSent = EmailHelper::contact($model);
             if ($emailSent) {
                 Yii::$app->session->setFlash('success', 'Email sent successfully.');
             } else {
                 Yii::$app->session->setFlash('error', 'Failed to send email.');
             }
         }
-
+        else{
+            Yii::$app->session->setFlash('error', 'No data to send email.');
+        }
         if(Yii::$app->session->get('language')==='en'){
             return $this->redirect('/en');
         }
