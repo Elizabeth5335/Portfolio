@@ -77,5 +77,6 @@ return [
     'Try again'=>'Спробувати знову',
     'Success'=>'Успіх',
     'Error'=>'Помилка',
-    'Send one more'=>'Надіслати ще одне'
+    'Send one more'=>'Надіслати ще одне',
+    'I am a front-end developer from Ukraine. I am not afraid of challenges and am ready to take on interesting tasks.'=>'Я фронт-енд розробник з України. Я не боюся викликів та готова братися за цікаві завдання.'
     ];

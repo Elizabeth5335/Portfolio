@@ -18,9 +18,8 @@ AppAsset::register($this);
 $this->registerCsrfMetaTags();
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no']);
-$this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
-$this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
-$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => '@public_html/favicon.ico']);
+$this->registerMetaTag(['name' => 'description', 'content' => Yii::t('translations', 'I am a front-end developer from Ukraine. I am not afraid of challenges and am ready to take on interesting tasks.')]);
+$this->registerMetaTag(['name' => 'keywords', 'content' => 'фронт-енд розробник, front-end developer, сайти, web-sites, html, css, php, js, Єлизавета Лазарєва, Yelyzaveta Lazarieva']);
 
 ?>
 <?php $this->beginPage() ?>
