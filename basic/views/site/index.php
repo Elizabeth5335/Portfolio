@@ -155,11 +155,11 @@ if (in_array($language, $acceptLang)) {
                     <div class="resume-item pb-0">
                         <h4><?= Yii::t('translations', 'Yelyzaveta') ?> <?= Yii::t('translations', 'Lazarieva') ?></h4>
                         <p>
-                            <em><?= Yii::t('translations', 'Now I am a 4th year student. I have almost a year experience in Frontend developing.') ?></em>
+                            <em><?= Yii::t('translations', 'I graduated from V.N.Karazin Kharkiv National University. I have one year of commercial experience in Frontend development.') ?></em>
                         </p>
                         <p>
                         <ul>
-                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Kharkiv, Ukraine') ?>
+                            <li><i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Kharkiv, Ukraine') ?> / <?= Yii::t('translations', 'Łódź, Poland') ?>
                             </li>
                             <li><i class="fa fa-chevron-right"></i> <a href="tel:+380991889215">+380 991 889 215</a>; <a
                                         href="tel:+48695178074">+48 695 178 074</a></li>
@@ -183,7 +183,7 @@ if (in_array($language, $acceptLang)) {
                                 <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Make layouts responsive') ?>
                             </li>
                             <li>
-                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Work with YII2 and .net frameworks') ?>
+                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Work with YII2, Angular and .net frameworks') ?>
                             </li>
                             <li>
                                 <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'Work with database (SQL)') ?>
@@ -298,7 +298,7 @@ if (in_array($language, $acceptLang)) {
                                 <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I play guitar and piano') ?>
                             </li>
                             <li>
-                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I started to learn 8 languages, but speak 4.5') ?>
+                                <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I studied 6 languages (although some of them remained at the elementary level)') ?>
                             </li>
                             <li>
                                 <i class="fa fa-chevron-right"></i> <?= Yii::t('translations', 'I drink a looooot of tea') ?>
