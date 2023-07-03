@@ -172,7 +172,7 @@ if (in_array($language, $acceptLang)) {
                     <h3 class="resume-title"><?= Yii::t('translations', 'Professional Experience') ?></h3>
                     <div class="resume-item">
                         <h4>Front-End Developer</h4>
-                        <h5><?= Yii::t('translations', 'June 2022 - Present') ?></h5>
+                        <h5><?= Yii::t('translations', 'June 2022 - June 2023') ?></h5>
                         <p><em><?= Yii::t('translations', 'VESCOM, Łódź, Poland') ?></em></p>
                         <p>
                         <ul>

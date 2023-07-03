@@ -26,7 +26,7 @@ return [
     'V.N.Karazin Kharkiv National University'=>'ХНУ ім. В.Н.Каразіна',
     'Language'=>'Change language',
     'Home'=>'На головну',
-    'June 2022 - Present'=>'Червень 2022 - Теперішній час',
+    'June 2022 - June 2023'=>'Червень 2022 - Червень 2023',
     'VESCOM, Łódź, Poland'=>'VESCOM, Лодзь,Польща',
     'Work with database (SQL)'=>'Робота з базами даних (SQL)',
     'Work with YII2 and .net frameworks'=>' Робота з фрейморками YII2 та .net',
