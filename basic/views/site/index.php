@@ -416,6 +416,43 @@ if (in_array($language, $acceptLang)) {
                     <ul class="box-container m-auto p-3">
                         <li class="box">
                             <div class="portfolio-img">
+                                <a href="/img/portfolio/portfolio-5.jpg" class="glightbox2"
+                                   data-glightbox="title: Currency converter ; description: .custom-desc5; descPosition: left;">
+                                    <img src="/img/portfolio/portfolio-5.jpg" alt="image"/>
+                                </a>
+                                <div class="glightbox-desc custom-desc5">
+                                    <p>
+                                        <a href="https://elizabeth5335.github.io/exchange/" target="_blank"
+                                           style="text-decoration: underline; font-weight: bold">Currency converter</a>
+                                        <?= Yii::t('translations', 'is a project for practicing the use of Angular.') ?>
+                                    </p>
+                                    <p>
+                                        <?= Yii::t('translations', 'It is a website that converts one currency into another. It was written using Angular.') ?>
+                                    </p>
+                                    <p>
+                                        <?= Yii::t('translations', 'For this website, I used an open API to get the current exchange rate for EUR, USD, UAH and PLN.') ?>
+                                    </p>
+                                    <p>
+                                        <?= Yii::t('translations', 'It was hosted on GitHub Pages.') ?>
+                                        <a href="https://github.com/Elizabeth5335/exchange" target="_blank"
+                                           style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations', 'Link to Repo') ?>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Currency converter</h4>
+                                <p><?= Yii::t('translations', 'Made with Angular') ?></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <ul class="box-container m-auto p-3">
+                        <li class="box">
+                            <div class="portfolio-img">
                                 <a href="/img/portfolio/portfolio-2.jpg" class="glightbox2"
                                    data-glightbox="title: <?= Yii::t('translations', 'First Resume') ?> ; description: .custom-desc2; descPosition: left;">
                                     <img src="/img/portfolio/portfolio-2.jpg" alt="image"/>
