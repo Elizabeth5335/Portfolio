@@ -132,6 +132,30 @@ if (in_array($language, $acceptLang)) {
                                 <h1><i class="fas fa-database"></i></h1>
                                 <h5>MySQL</h5>
                             </div>
+                            <div class="col-sm-3 col-4">
+                                <div class="" id="angular" style="margin-bottom: 0.5rem;">
+                                    <img src="/img/angular.png" style="margin-top: 0.6em; height: 3em">
+                                </div>
+                                <h5>Angular</h5>
+                            </div>
+                            <div class="col-sm-3 col-4">
+                                <div class="" id="json" style="margin-bottom: 0.5rem;">
+                                    <img src="/img/json.png" style="margin-top: 0.6em; height: 3em">
+                                </div>
+                                <h5>JSON</h5>
+                            </div>
+                            <div class="col-sm-3 col-4">
+                                <div class="" id="github" style="margin-bottom: 0.5rem;">
+                                    <img src="/img/github-mark.png" style="margin-top: 0.6em; height: 3em">
+                                </div>
+                                <h5>GitHub</h5>
+                            </div>
+                            <div class="col-sm-3 col-4">
+                                <div class="" id="figma" style="margin-bottom: 0.5rem;">
+                                    <img src="/img/figma.png" style="margin-top: 0.6em; height: 3em">
+                                </div>
+                                <h5>Figma</h5>
+                            </div>
                         </div>
 
                     </div>
@@ -380,42 +404,6 @@ if (in_array($language, $acceptLang)) {
                     <ul class="box-container m-auto p-3">
                         <li class="box">
                             <div class="portfolio-img">
-                                <a href="/img/portfolio/portfolio-4.jpg" class="glightbox2"
-                                   data-glightbox="title: Gamesss ; description: .custom-desc4; descPosition: left;">
-                                    <img src="/img/portfolio/portfolio-4.jpg" alt="image"/>
-                                </a>
-                                <div class="glightbox-desc custom-desc4">
-                                    <p>
-                                        <a href="https://elizabeth5335.github.io/Games/index.html" target="_blank"
-                                           style="text-decoration: underline; font-weight: bold">Gamesss </a>
-                                        <?= Yii::t('translations', 'is a project for practicing the use of JavaScript.') ?>
-                                    </p>
-                                    <p>
-                                        <?= Yii::t('translations', 'It is a website with three games. It was written using HTML, CSS and a looooot of JavaScript.') ?>
-                                    </p>
-                                    <p>
-                                        <?= Yii::t('translations', 'Initially, the website was supposed to be only for desktops. However in the end I decided to make it mobile friendly as well :)') ?>
-                                    </p>
-                                    <p>
-                                        <?= Yii::t('translations', 'It was hosted on GitHub Pages.') ?>
-                                        <a href="https://github.com/Elizabeth5335/Games" target="_blank"
-                                           style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations', 'Link to Repo') ?>
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4>Gamesss</h4>
-                                <p><?= Yii::t('translations', 'Made with JavaScript') ?></p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item">
-                    <ul class="box-container m-auto p-3">
-                        <li class="box">
-                            <div class="portfolio-img">
                                 <a href="/img/portfolio/portfolio-5.jpg" class="glightbox2"
                                    data-glightbox="title: Currency converter ; description: .custom-desc5; descPosition: left;">
                                     <img src="/img/portfolio/portfolio-5.jpg" alt="image"/>
@@ -448,6 +436,42 @@ if (in_array($language, $acceptLang)) {
                     </ul>
                 </div>
 
+
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <ul class="box-container m-auto p-3">
+                        <li class="box">
+                            <div class="portfolio-img">
+                                <a href="/img/portfolio/portfolio-4.jpg" class="glightbox2"
+                                   data-glightbox="title: Gamesss ; description: .custom-desc4; descPosition: left;">
+                                    <img src="/img/portfolio/portfolio-4.jpg" alt="image"/>
+                                </a>
+                                <div class="glightbox-desc custom-desc4">
+                                    <p>
+                                        <a href="https://elizabeth5335.github.io/Games/index.html" target="_blank"
+                                           style="text-decoration: underline; font-weight: bold">Gamesss </a>
+                                        <?= Yii::t('translations', 'is a project for practicing the use of JavaScript.') ?>
+                                    </p>
+                                    <p>
+                                        <?= Yii::t('translations', 'It is a website with three games. It was written using HTML, CSS and a looooot of JavaScript.') ?>
+                                    </p>
+                                    <p>
+                                        <?= Yii::t('translations', 'Initially, the website was supposed to be only for desktops. However in the end I decided to make it mobile friendly as well :)') ?>
+                                    </p>
+                                    <p>
+                                        <?= Yii::t('translations', 'It was hosted on GitHub Pages.') ?>
+                                        <a href="https://github.com/Elizabeth5335/Games" target="_blank"
+                                           style="text-decoration: underline; font-weight: bold"><br><?= Yii::t('translations', 'Link to Repo') ?>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Gamesss</h4>
+                                <p><?= Yii::t('translations', 'Made with JavaScript') ?></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 
                 <div class="col-lg-4 col-md-6 portfolio-item">
                     <ul class="box-container m-auto p-3">
