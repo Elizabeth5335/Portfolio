@@ -16,15 +16,6 @@ a:hover {
     text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    /*font-family: "Raleway", sans-serif;*/
-}
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -41,7 +32,7 @@ h6 {
 
 #header.header-scrolled {
     height: 60px;
-    background: rgba(25, 28, 31, 0.8);
+    background: rgba(25, 28, 31, 0.8) !important;
 }
 
 /*--------------------------------------------------------------
@@ -1411,4 +1402,61 @@ footer a.top {
 
 .skills div{
     margin: auto;
+}
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+.swiper {
+    width: 80%;
+    max-height: 500px;
+    --swiper-navigation-color: #fff;
+    background-size: cover;
+    background-position: center;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+
+
+.mySwiper .swiper-slide {
+    width: 13.5% !important;
+    max-height: 150px;
+    opacity: 0.4;
+}
+
+.label{
+    position: absolute;
+    left: auto;
+    top: 60%;
+    background: #336f18;
+    padding: 20px 40px;
+    color: white;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 829px){
+    .label{
+        opacity: 60%;
+        top: auto;
+    }
+}
+
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
 }
