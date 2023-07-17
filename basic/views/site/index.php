@@ -645,6 +645,13 @@ if (in_array($language, $acceptLang)) {
                         <div class="form-group mt-3">
                             <?= $form->field($model, 'message')->label(false)->textarea(['rows' => 6, 'placeholder' => Yii::t('translations', 'Message')]) ?>
                         </div>
+                        <div class="form-group form-check">
+                            <?= $form->field($model, 'agreed', [
+                                'template' => "{input}\n{label}\n{error}"
+                            ])->checkbox(['class' => 'form-check-input me-2', 'label' => Yii::t('translations', Yii::t('translations', 'I agree to the ') . '{privacyPolicy}', [
+                                'privacyPolicy' => Html::a(Yii::t('translations','Privacy Policy'), ['/policy.pdf'], ['target' => '_blank'])
+                            ])]) ?>
+                        </div>
                         <div class="text-center my-3">
                             <div class="form-group col-lg-offset-1 col-lg-11">
                                 <?= Html::submitButton(Yii::t('translations', 'Send Message'), ['class' => 'btn btn-primary']) ?>
